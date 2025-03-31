@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'GothamBold';
+    src: url('./GothamBold.ttf') format('woff2'), /* Modern Browsers */
+         url('./GothamBold.ttf') format('woff');   /* Older Browsers */
+    
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('./GothamBook.ttf') format('woff2'), /* Modern Browsers */
+         url('./GothamBook.ttf') format('woff');   /* Older Browsers */
+    
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('./GothamMedium.ttf') format('woff2'), /* Modern Browsers */
+         url('./GothamMedium.ttf') format('woff');   /* Older Browsers */
+    
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-extra';
+    src: url('./Montserrat-ExtraBold.otf') format('woff2'), /* Modern Browsers */
+         url('./Montserrat-ExtraBold.otf') format('woff');   /* Older Browsers */
+    
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url('./Montserrat-Regular.otf') format('woff2'), /* Modern Browsers */
+         url('./Montserrat-Regular.otf') format('woff');   /* Older Browsers */
+    
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+
+}
+
+body {
+    font-family: "Montserrat", sans-serif !important;
+    color: white !important;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    background: url('./herobackground.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    font-size: small;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+.social-icons {
+    width: 100%;
+    padding: 0 0.2rem;
+    margin: 0 0.5rem;
+}
+
+.in-touch-btn {
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 1rem;
+}
+
+.in-touch-btn img {
+    width: 2rem;
+    margin: 0 2rem;
+}
+
+.hero-main {
+    height: 35rem;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 5rem;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-title.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.desktop-nav {
+    display: none !important;
+}
+
+.arrows {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+    .desktop-nav {
+        display: flex !important;
+    }
+}
+  
+@media only screen and (min-width: 1201px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+}
