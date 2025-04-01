@@ -86,19 +86,24 @@ nav ul li {
 }
 
 .in-touch-btn {
-    border-radius: 1rem;
-    padding: 0.3rem 1rem;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    padding: 0.1rem;
+    background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
+    width: max-content;
+    border-radius: 2rem;
+    position: relative;
+    top: 4rem;
+}
+
+.in-touch-btn button {
+    background: linear-gradient(#09001eff, #1a0f29ff) ;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
     color: white;
-    margin: 1rem;
 }
 
 .in-touch-btn img {
     width: 2rem;
-    margin: 0 2rem;
+    margin-left: 1rem;
 }
 
 .hero-main {
@@ -110,12 +115,12 @@ nav ul li {
     font-size: 5rem;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-20px);
 }
 
 .hero-title.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .desktop-nav {

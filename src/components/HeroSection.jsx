@@ -38,7 +38,7 @@ export default function HeroSection () {
             </div>
             <div className="col-sm-6 d-flex-justify-content-start">
                 <h1 className={`hero-title ${isVisible ? "active" : ""}`}>{text ? "AMPLYFYING BRANDS" : "ENGAGING AUDIENCES"}</h1>
-                <button className="in-touch-btn">GET IN TOUCH <img src={Arrow} alt="Arrow" /></button>
+                <div className="in-touch-btn"> <button >GET IN TOUCH <img src={Arrow} alt="Arrow" /></button> </div> 
             </div>
             <div className="col-sm-2 d-flex justify-content-end align-items-center">
                 <span className="material-symbols-outlined arrows" onClick={handleClick}>
