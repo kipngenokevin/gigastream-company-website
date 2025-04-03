@@ -122,6 +122,11 @@ nav ul li {
     transform: translateX(-20px);
 }
 
+.title {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
 .hero-title.active {
     opacity: 1;
     transform: translateX(0);
@@ -149,6 +154,25 @@ nav ul li {
     text-align: left;
 }
 
+.work-section {
+    background-image: url('./workbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+.work-container {
+    width: 18rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.work-container img {
+    margin: 1rem;
+}
+
 footer {
     background-image: url('./footerbg.svg');
     background-size: cover;
@@ -162,6 +186,28 @@ footer {
     margin: 2rem 0rem;
 }
 
+.red-bg {
+    background-color: red;
+}
+
+.purple-bg {
+    background-color: purple;
+}
+
+.work-container-btn {
+    padding: 0.1rem;
+    background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
+    width: max-content;
+    border-radius: 1rem;
+}
+
+.work-container-btn button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    color: white;
+}
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
@@ -171,6 +217,11 @@ footer {
 
     .hero-title {
         font-size: 4rem;
+    }
+
+    .title {
+        font-weight: 900;
+        font-size: 3rem;
     }
 
     .contact-item {
@@ -191,6 +242,12 @@ footer {
     .hero-title {
         font-size: 5rem;
     }
+
+    .title {
+        font-weight: 900;
+        font-size: 4rem;
+    }
+
     .contact-section {
         flex-direction: row;
     }
