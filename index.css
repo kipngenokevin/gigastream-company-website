@@ -163,6 +163,37 @@ nav ul li {
     padding: 2rem 0;
 }
 
+.blog-section {
+    background-image: url('./blogbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+.case-section {
+    background-image: url('./casebg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+.clients-section {
+    background-image: url('./workbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 60vh;
+    padding: 2rem 0;
+}
+
+.case-main {
+    height: 50vh;
+}
+
 .work-container {
     width: 18rem;
     padding: 1rem;
@@ -171,6 +202,19 @@ nav ul li {
 
 .work-container img {
     margin: 1rem;
+}
+
+.case-container {
+    width: 24rem;
+}
+
+.case-container img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.clients-container {
+    height: 30vh;
 }
 
 footer {
@@ -192,6 +236,10 @@ footer {
 
 .purple-bg {
     background-color: purple;
+}
+
+.dark-bg {
+    background: linear-gradient(#09001eff, #1a0f29ff) ;
 }
 
 .work-container-btn {

@@ -6,7 +6,7 @@ export default function Footer () {
     return (
         <footer className="d-flex flex-column justify-content-center align-items-center">
             <div className="col-sm-12 text-center">
-                <h2>CONTACT US</h2>
+                <h2 className="title">CONTACT US</h2>
                 <Map />
                 <div className="d-flex contact-section justify-content-around align-items-center">
                     <div className="d-flex align-items-center contact-item">

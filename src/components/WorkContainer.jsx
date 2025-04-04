@@ -1,6 +1,7 @@
-import AdsLogo from '../../public/adsicon.png'
-import Sustain from '../../public/sustain.png'
-import Branding from '../../public/branding.png'
+import AdsLogo from '../../public/adicon.png'
+import Sustain from '../../public/sustainabilityicon.png'
+import Branding from '../../public/brandingicon.png'
+import B2B from '../../public/b2bicon.png'
 
 export default function WorkContainer() {
     return (
@@ -18,7 +19,7 @@ export default function WorkContainer() {
                 <div className="work-container-btn"> <button className="purple-bg">More</button> </div>
             </div>
             <div className="work-container red-bg text-left d-flex flex-column justify-content-between">
-                <img width={100} src={Sustain} alt="ads Icon" />
+                <img width={100} src={B2B} alt="ads Icon" />
                 <h5>B2B/ B2C TECH SOLUTIONS</h5>
                 <p>We build dynamic tools designed to engage audiences across diverse ecosystems, driving meaningful interactions</p>
                 <div className="work-container-btn"> <button className="red-bg">More</button> </div>
