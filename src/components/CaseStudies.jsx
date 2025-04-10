@@ -20,16 +20,16 @@ export default function CaseStudies() {
     if (!isHovered) {
       const timer = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % (images.length * 3));
-      }, 6000);
+      }, 2000);
       return () => clearInterval(timer);
     }
-  }, [isHovered]);
+  }, [images.length, isHovered]);
 
   useEffect(() => {
     if (currentIndex === 0) {
       setTimeout(() => setCurrentIndex(images.length), 0);
     }
-  }, [currentIndex]);
+  }, [currentIndex, images.length]);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) =>
