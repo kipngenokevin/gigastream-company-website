@@ -3,8 +3,45 @@ import Sustain from '../../public/sustainabilityicon.png'
 import Branding from '../../public/brandingicon.png'
 import B2B from '../../public/b2bicon.png'
 import ModalComponent from './ModalComponent'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const WorkContainer = () => {
+  const workContainer = useRef(null);
+  useEffect(() => {
+    gsap.from(
+      'work-container',
+      {
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: workContainer.current,
+          start: 'top 100%',
+          scrub: true,
+          toggleActions: 'play none none reverse',
+        }
+      }
+    )
+    gsap.to(
+      'work-container',
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: workContainer.current,
+          start: 'top 100%',
+          scrub: true,
+          toggleActions: 'play none none reverse',
+        }
+      }
+    )
+  });
     const modalData = [
       {
         title: 'MEDIA',
@@ -37,9 +74,11 @@ const WorkContainer = () => {
     ];
   
     return (
-      <div className="d-flex flex-wrap justify-content-center">
+      <div className="d-flex flex-wrap justify-content-center py-10">
+        
         {modalData.map((item, index) => (
           <ModalComponent
+            ref={workContainer}
             key={index}
             title={item.title}
             description={item.description}
