@@ -3,7 +3,7 @@ import Gradient from "../../public/gradient.svg"
 
 export default function Blog() {
     return (
-        <section className="blog-section d-flex align-items-center">
+        <section id="blog" className="blog-section d-flex align-items-center">
             <div className="container ">
                 <div className="col-sm-6">
                     <img className="img-fluid" src={Gradient} alt="gradient" />

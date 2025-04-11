@@ -30,7 +30,7 @@ export default function HeroSection () {
     }
 
     return (
-        <section className="container d-flex justify-content-between align-items-center hero-main">
+        <section id="home" className="container d-flex justify-content-between align-items-center hero-main">
             <div className="d-flex justify-content-start align-items-center">
                 <span className="material-symbols-outlined arrows" onClick={handleClick}>
                     arrow_back_ios

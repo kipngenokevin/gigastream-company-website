@@ -46,7 +46,7 @@ export default function CaseStudies() {
 	};
 
 	return (
-		<section className='case-section py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
+		<section id="portfolio" className='case-section py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
 			<div className='container mx-auto px-4'>
 				<h2 className='title text-center'>Latest Case Studies</h2>
 

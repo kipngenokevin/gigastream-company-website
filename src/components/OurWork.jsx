@@ -33,7 +33,7 @@ export default function Work() {
 	}, []);
 
 	return (
-		<section className='work-section'>
+		<section id="about" className='work-section'>
 			<div className='container'>
 				<div className='col-sm-12 text-center'>
 					<h2 className='title' ref={titleRef}>
