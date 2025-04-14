@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const ModalComponent = ({
 	title,
@@ -11,6 +11,51 @@ const ModalComponent = ({
 }) => {
 	const [show, setShow] = useState(false);
 	const [isVisible, setIsVisible] = useState(false);
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const [isHovered, setIsHovered] = useState(false);
+	const carouselRef = useRef(null);
+
+	const images = [
+		{
+			src: "../../public/hewasafi.png",
+			alt: "Hewa Safi Case Study",
+			caption: "Hewa Safi Case Study",
+		},
+		{
+			src: "../../public/expressway.png",
+			alt: "Expressway Case Study",
+			caption: "Expressway Case Study",
+		},
+		{
+			src: "../../public/branding.png",
+			alt: "Tollbooths Case Study",
+			caption: "Tollbooths Case Study",
+		},
+	];
+
+	const extendedImages = [...images, ...images, ...images];
+
+	useEffect(() => {
+		if (!isVisible && show) {
+			const timer = setTimeout(() => setShow(false), 500);
+			return () => clearTimeout(timer);
+		}
+	}, [isVisible, show]);
+
+	useEffect(() => {
+		if (!isHovered) {
+			const timer = setInterval(() => {
+				setCurrentIndex((prev) => (prev + 1) % (images.length * 3));
+			}, 2000);
+			return () => clearTimeout(timer);
+		}
+	}, [images.length, isHovered]);
+
+	useEffect(() => {
+		if (currentIndex === 0) {
+			setTimeout(() => setCurrentIndex(images.length), 0);
+		}
+	}, [currentIndex, images.length]);
 
 	const handleClose = () => {
 		setIsVisible(false);
@@ -25,12 +70,17 @@ const ModalComponent = ({
 		}
 	};
 
-	useEffect(() => {
-		if (!isVisible && show) {
-			const timer = setTimeout(() => setShow(false), 500);
-			return () => clearTimeout(timer);
-		}
-	}, [isVisible, show]);
+	const goToPrevious = () => {
+		setCurrentIndex((prev) =>
+			prev - 1 < 0 ? images.length * 3 - 1 : prev - 1
+		);
+	};
+
+	const goToNext = () => {
+		setCurrentIndex((prev) =>
+			prev + 1 >= images.length * 3 ? images.length : prev + 1
+		);
+	};
 
 	const colorStyles = {
 		"red-bg": "bg-red-700 hover:bg-red-800",
@@ -72,7 +122,7 @@ const ModalComponent = ({
 					style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
 					onClick={handleOutsideClick}>
 					<div
-						className={`max-w-3xl w-full m-4 transform transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
+						className={`max-w-5xl w-full m-4 transform transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
               ${
 					isVisible
 						? "scale-100 opacity-100 translate-y-0"
@@ -104,13 +154,92 @@ const ModalComponent = ({
 								</button>
 								<div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-30' />
 							</div>
-							<div className='p-8 bg-gradient-to-b from-gray-50 to-white'>
-								{/* <img 
-                  width={120} 
-                  src={logo} 
-                  alt={`${title} Icon`} 
-                  className="mb-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-                /> */}
+							<div className='p-8 bg-gradient-to-b from-gray-50 to-white max-h-[70vh] overflow-y-auto'>
+								{/* <img
+									width={120}
+									src={logo}
+									alt={`${title} Icon`}
+									className='mb-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 mx-auto'
+								/> */}
+
+								{/* Image Carousel */}
+								<div
+									className='relative max-w-4xl mx-auto group mb-8'
+									ref={carouselRef}
+									onMouseEnter={() => setIsHovered(true)}
+									onMouseLeave={() => setIsHovered(false)}>
+									<div className='overflow-hidden rounded-xl shadow-xl'>
+										<div
+											className='flex transition-transform duration-1000 ease-in-out'
+											style={{
+												transform: `translateX(-${
+													(currentIndex -
+														images.length) *
+													100
+												}%)`,
+											}}>
+											{extendedImages.map(
+												(image, index) => (
+													<div
+														key={index}
+														className='w-full flex-shrink-0 flex justify-center items-center'>
+														<div className='relative w-full'>
+															<img
+																src={image.src}
+																alt={image.alt}
+																className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300 group-hover:blur-sm'
+															/>
+															<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+																<p className='text-white text-2xl font-semibold'>
+																	{
+																		image.caption
+																	}
+																</p>
+															</div>
+														</div>
+													</div>
+												)
+											)}
+										</div>
+									</div>
+
+									{/* Navigation Buttons */}
+									<button
+										onClick={goToPrevious}
+										className='absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+										<svg
+											className='w-6 h-6 text-gray-600'
+											fill='none'
+											stroke='currentColor'
+											viewBox='0 0 24 24'>
+											<path
+												d='M15 19L9 12L15 5'
+												stroke='#000000'
+												strokeWidth='1.5'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+											/>
+										</svg>
+									</button>
+									<button
+										onClick={goToNext}
+										className='absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+										<svg
+											className='w-6 h-6 text-gray-600'
+											fill='none'
+											stroke='currentColor'
+											viewBox='0 0 24 24'>
+											<path
+												d='M9 5L15 12L9 19'
+												stroke='#000000'
+												strokeWidth='1.5'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+											/>
+										</svg>
+									</button>
+								</div>
+
 								<p className='text-gray-700 mb-4 leading-relaxed font-medium text-lg'>
 									{description}
 								</p>

@@ -56,7 +56,7 @@ const WorkContainer = () => {
 						modern audiences—driving measurable growth, relevance,
 						and long-term success.
 					</p>
-					<ul className='list-disc pl-6 mb-4 list-inside'>
+					<ul className='list-disc pl-6 mb-4 list-inside '>
 						<li>Connected Q-riosity</li>
 						<li>Media concessions – Moja Expressway/ DOOH</li>
 						<li>Outdoor Auditing</li>

@@ -24,7 +24,6 @@ export default function Clients() {
 					scrub: true,
 					trigger: sectionRef.current,
 					start: "top 90%",
-					
 					toggleActions: "play none none none",
 				},
 			});
