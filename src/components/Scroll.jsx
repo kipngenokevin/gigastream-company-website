@@ -14,6 +14,7 @@ export default function Scroll() {
 			text: "SCROLL DOWN",
 			duration: 3,
 			ease: "power2.inOut",
+			delay:2,
 		});
 	}, []);
 	return (
