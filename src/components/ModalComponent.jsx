@@ -34,7 +34,7 @@ const ModalComponent = ({ title, description,moreDescription, bgColor, logo }) =
     <>
       {/* Card Container */}
       <div 
-        className={`work-container ${colorStyles[bgColor]} text-white p-6 rounded-xl shadow-lg 
+        className={`work-container ${colorStyles[bgColor]} text-white p-6 rounded-xl shadow-lg  
           transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-between`}
       >
         <img 
