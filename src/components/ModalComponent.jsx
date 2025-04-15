@@ -187,7 +187,7 @@ const ModalComponent = ({
 															<img
 																src={image.src}
 																alt={image.alt}
-																className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300 group-hover:blur-sm'
+																className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300'
 															/>
 															<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
 																<p className='text-white text-2xl font-semibold'>
