@@ -4,11 +4,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import Arrow from "../../public/arrow.svg";
 import Gradient from "../../public/gradient.svg";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { BsArrowRight } from "react-icons/bs";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,21 +14,27 @@ export default function Blog() {
 
 	useEffect(() => {
 		const ctx = gsap.context(() => {
-			gsap.from(".blog-animate", {
-				opacity: 0,
-				y: 50,
-				stagger: 0.2,
-				duration: 1,
-				ease: "power2.out",
-				scrollTrigger: {
-					scrub: true,
-					trigger: sectionRef.current,
-					start: "top 100%",
-					toggleActions: "play none none none",
+			gsap.fromTo(
+				".blog-animate",
+				{
+					opacity: 0,
+					y: 50,
 				},
-			});
+				{
+					opacity: 1,
+					y: 0,
+					stagger: 0.3,
+					duration: 1,
+					ease: "power2.out",
+					scrollTrigger: {
+						trigger: sectionRef.current,
+						start: "top 80%",
+						toggleActions: "play none none reverse",
+						markers: true,
+					},
+				}
+			);
 		}, sectionRef);
-
 		return () => ctx.revert();
 	}, []);
 
@@ -47,20 +50,18 @@ export default function Blog() {
 						alt='gradient'
 						className='img-fluid blog-animate'
 					/>
-					<h2 className='title blog-animate'>
-						Lorem ipsum dolor sit amet
-					</h2>
-					<p className='blog-animate'>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-						dolore
+					<h2 className='title blog-animate '>Who we are... </h2>
+					<p className='blog-animate text-2xl leading-9'>
+						We are a bespoke advertising media tech company that
+						focuses on making real-life consumer and brand
+						connections
 					</p>
-					<div className='work-container-btn blog-animate'>
+					{/* <div className='work-container-btn blog-animate'>
 						<button className='dark-bg flex items-center gap-3 group'>
 							<b>Read More</b>
-							<BsArrowRight className="text-2xl group-hover:translate-x-2 transition-all duration-300"/>
+							<BsArrowRight className='text-2xl group-hover:translate-x-2 transition-all duration-300' />
 						</button>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</section>

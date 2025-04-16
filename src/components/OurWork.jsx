@@ -24,8 +24,8 @@ export default function Work() {
 				ease: "power3.out",
 				scrollTrigger: {
 					trigger: titleRef.current,
-                    start: "bottom 100%",
-                    scrub: true,
+          start: "bottom 100%",
+					repeat: -1,
 					toggleActions: "play none none reverse",
 				},
 			}

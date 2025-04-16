@@ -49,10 +49,12 @@ export default function HeroSection() {
 					{text ? "AMPLYFYING BRANDS" : "ENGAGING AUDIENCES"}
 				</h1>
 				<div className='in-touch-btn'>
-					<button className="flex items-center gap-4 group " >
-                        GET IN TOUCH
-                        <BsArrowRight className="text-2xl group-hover:translate-x-3 transition duration-300"/>
-					</button>
+					<a href='#contacts ' className="no-underline!">
+						<button className='flex items-center gap-4 group '>
+							GET IN TOUCH
+							<BsArrowRight className='text-2xl group-hover:translate-x-3 transition duration-300' />
+						</button>
+					</a>
 				</div>
 			</div>
 			<div className='col-sm-2 d-flex justify-content-end align-items-center'>

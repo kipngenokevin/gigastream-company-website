@@ -1,19 +1,24 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from "react";
-import HewaSafi from "../../public/hewasafi.png";
-import Express from "../../public/expressway.png";
-import Tolls from "../../public/tollbooths.png";
+import HewaSafi from "../../public/hewasafi-1.jpeg";
+import Express from "../../public/expressway-entry.jpeg";
+import Tolls from "../../public/tollbooth.jpeg";
+import Hot_air from "../../public/mastercard-balloon.jpeg"
+import Column from "../../public/column.jpeg"
+
 
 export default function CaseStudies() {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [isHovered, setIsHovered] = useState(false);
+	const [isHovered] = useState(false);
 	const carouselRef = useRef(null);
 
 	const images = [
 		{ src: HewaSafi, alt: "Hewa Safi Case Study" },
 		{ src: Express, alt: "Expressway Case Study" },
 		{ src: Tolls, alt: "Tollbooths Case Study" },
+		{ src: Hot_air, alt: "Hot Air Balloon Case Study" },
+		{ src: Column, alt: "Column Case Study" },
 	];
 
 	const extendedImages = [...images, ...images, ...images];
@@ -22,7 +27,7 @@ export default function CaseStudies() {
 		if (!isHovered) {
 			const timer = setInterval(() => {
 				setCurrentIndex((prev) => (prev + 1) % (images.length * 3));
-			}, 2000);
+			}, 4000);
 			return () => clearInterval(timer);
 		}
 	}, [images.length, isHovered]);
@@ -52,9 +57,7 @@ export default function CaseStudies() {
 
 				<div
 					className='relative max-w-7xl mx-auto group'
-					ref={carouselRef}
-					onMouseEnter={() => setIsHovered(true)}
-					onMouseLeave={() => setIsHovered(false)}>
+					ref={carouselRef}>
 					<div className='overflow-hidden rounded-xl shadow-xl'>
 						<div
 							className='flex transition-transform duration-1000 ease-in-out'
@@ -65,7 +68,7 @@ export default function CaseStudies() {
 							}}>
 							{extendedImages.map((image, index) => {
 								const distance = Math.abs(index - currentIndex);
-								const isCenter = distance === 2;
+								const isCenter = distance === 4;
 								const isAdjacent = distance === 1;
 
 								return (
