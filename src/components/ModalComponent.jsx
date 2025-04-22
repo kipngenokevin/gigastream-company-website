@@ -153,93 +153,99 @@ const ModalComponent = ({
 								<div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-30' />
 							</div>
 
-							{/* Modal Body */}
+							{/* Modal Body
+							 */}
 							<div className='p-8 bg-gradient-to-b from-gray-50 to-white max-h-[70vh] overflow-y-auto'>
 								{/* Carousel (Hidden for BRANDING Section) */}
-								{title !== "BRANDING" && title !== "SUSTAINABILITY" &&(
-									<div
-										className='relative max-w-4xl mx-auto group mb-8'
-										ref={carouselRef}
-										onMouseEnter={() => setIsHovered(true)}
-										onMouseLeave={() =>
-											setIsHovered(false)
-										}>
-										<div className='overflow-hidden rounded-xl shadow-xl'>
-											<div
-												className='flex transition-transform duration-1000 ease-in-out'
-												style={{
-													transform: `translateX(-${
-														(currentIndex -
-															images.length) *
-														100
-													}%)`,
-												}}>
-												{extendedImages.map(
-													(image, index) => (
-														<div
-															key={index}
-															className='w-full flex-shrink-0 flex justify-center items-center'>
-															<div className='relative w-full'>
-																<img
-																	src={
-																		image.src
-																	}
-																	alt={
-																		image.alt
-																	}
-																	className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300'
-																/>
-																<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
-																	<p className='text-white text-2xl font-semibold'>
-																		{
-																			image.caption
+								{title !== "BRANDING" &&
+									title !== "SUSTAINABILITY" && (
+										// Carousel integration
+
+										<div
+											className='relative max-w-4xl mx-auto group mb-8'
+											ref={carouselRef}
+											onMouseEnter={() =>
+												setIsHovered(true)
+											}
+											onMouseLeave={() =>
+												setIsHovered(false)
+											}>
+											<div className='overflow-hidden rounded-xl shadow-xl'>
+												<div
+													className='flex transition-transform duration-1000 ease-in-out'
+													style={{
+														transform: `translateX(-${
+															(currentIndex -
+																images.length) *
+															100
+														}%)`,
+													}}>
+													{extendedImages.map(
+														(image, index) => (
+															<div
+																key={index}
+																className='w-full flex-shrink-0 flex justify-center items-center'>
+																<div className='relative w-full'>
+																	<img
+																		src={
+																			image.src
 																		}
-																	</p>
+																		alt={
+																			image.alt
+																		}
+																		className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300'
+																	/>
+																	<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+																		<p className='text-white text-2xl font-semibold'>
+																			{
+																				image.caption
+																			}
+																		</p>
+																	</div>
 																</div>
 															</div>
-														</div>
-													)
-												)}
+														)
+													)}
+												</div>
 											</div>
-										</div>
 
-										{/* Navigation Buttons */}
-										<button
-											onClick={goToPrevious}
-											className='absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
-											<svg
-												className='w-6 h-6 text-gray-600'
-												fill='none'
-												stroke='currentColor'
-												viewBox='0 0 24 24'>
-												<path
-													d='M15 19L9 12L15 5'
-													stroke='#000000'
-													strokeWidth='1.5'
-													strokeLinecap='round'
-													strokeLinejoin='round'
-												/>
-											</svg>
-										</button>
-										<button
-											onClick={goToNext}
-											className='absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
-											<svg
-												className='w-6 h-6 text-gray-600'
-												fill='none'
-												stroke='currentColor'
-												viewBox='0 0 24 24'>
-												<path
-													d='M9 5L15 12L9 19'
-													stroke='#000000'
-													strokeWidth='1.5'
-													strokeLinecap='round'
-													strokeLinejoin='round'
-												/>
-											</svg>
-										</button>
-									</div>
-								)}
+											{/* Navigation Buttons */}
+											<button
+												onClick={goToPrevious}
+												className='absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+												<svg
+													className='w-6 h-6 text-gray-600'
+													fill='none'
+													stroke='currentColor'
+													viewBox='0 0 24 24'>
+													<path
+														d='M15 19L9 12L15 5'
+														stroke='#000000'
+														strokeWidth='1.5'
+														strokeLinecap='round'
+														strokeLinejoin='round'
+													/>
+												</svg>
+											</button>
+											<button
+												onClick={goToNext}
+												className='absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+												<svg
+													className='w-6 h-6 text-gray-600'
+													fill='none'
+													stroke='currentColor'
+													viewBox='0 0 24 24'>
+													<path
+														d='M9 5L15 12L9 19'
+														stroke='#000000'
+														strokeWidth='1.5'
+														strokeLinecap='round'
+														strokeLinejoin='round'
+													/>
+												</svg>
+											</button>
+										</div>
+									)}
 
 								{/* Description */}
 								<p className='text-gray-700 mb-4 leading-relaxed font-medium text-lg'>

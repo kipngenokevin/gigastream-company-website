@@ -1,10 +1,8 @@
-/** @format */
-
-"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Gradient from "../../public/gradient.svg";
+import { BsArrowRight } from "react-icons/bs";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,12 +54,12 @@ export default function Blog() {
 						focuses on making real-life consumer and brand
 						connections
 					</p>
-					{/* <div className='work-container-btn blog-animate'>
+					<div className='work-container-btn blog-animate'>
 						<button className='dark-bg flex items-center gap-3 group'>
 							<b>Read More</b>
 							<BsArrowRight className='text-2xl group-hover:translate-x-2 transition-all duration-300' />
 						</button>
-					</div> */}
+					</div>
 				</div>
 			</div>
 		</section>

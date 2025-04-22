@@ -1,9 +1,6 @@
 /** @format */
 
-import Facebook from "../../public/facebook.svg";
-import Linkedin from "../../public/linkedin.svg";
-import Instagram from "../../public/instagram.svg";
-import X from "../../public/X.svg";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 
 export default function Navbar() {
 	return (
@@ -63,32 +60,27 @@ export default function Navbar() {
 			</ul>
 			<ul className='d-flex justify-content-end'>
 				<li>
-					<img
-						className='social-icons'
-						src={Facebook}
-						alt='Facebook'
-						href=''
-					/>
-				</li>
-				<li>
-					<img className='social-icons' src={X} alt='X' />
-				</li>
-				<li>
-					<a href='https://www.instagram.com/gigastream_media/' target='_blank'>
-						<img
-							className='social-icons'
-							src={Instagram}
-							alt='Instagram'
-						/>
+					<a
+						href='https://www.instagram.com/gigastream_media/'
+						target='_blank'>
+						<BsInstagram className='social-icons w-6 h-6 text-white' />
 					</a>
 				</li>
 				<li>
-					<a href='https://www.linkedin.com/company/gigastream-media-tech-ltd' target='_blank'>
-						<img
-							className='social-icons'
-							src={Linkedin}
-							alt='Linkedin'
-						/>
+					<a
+						href='https://www.linkedin.com/company/gigastream-media-tech-ltd'
+						target='_blank'>
+						<BsLinkedin className="social-icons w-6 h-6 text-white" />
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<BsTwitterX className="social-icons w-6 h-6 text-white" />
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<BsFacebook className="social-icons w-6 h-6 text-white" />
 					</a>
 				</li>
 			</ul>

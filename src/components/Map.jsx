@@ -3,8 +3,9 @@
 export default function Map() {
 	return (
 		<>
-			<div className='col-sm-12 d-flex justify-content-center maps-container'>
+			<div className='col-sm-12 d-flex justify-content-center maps-container rounded-sm'>
 				<iframe
+					className="rounded-sm"
 					width='80%'
 					height='400'
 					frameborder='0'
