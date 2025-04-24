@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section {
-    background: url('./herobackground.svg');
+    background: url('public/herobackground.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,7 +157,7 @@ nav ul li {
 }
 
 .work-section {
-    background-image: url('./workbg.png');
+    background-image: url('public/workbg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -166,7 +166,7 @@ nav ul li {
 }
 
 .blog-section {
-    background-image: url('./blogbg.png');
+    background-image: url('public/blogbg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -175,7 +175,7 @@ nav ul li {
 }
 
 .case-section {
-    background-image: url('./casebg.png');
+    background-image: url('public/casebg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +184,7 @@ nav ul li {
 }
 
 .clients-section {
-    background-image: url('./workbg.png');
+    background-image: url('public/workbg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -220,7 +220,7 @@ nav ul li {
 }
 
 footer {
-    background-image: url('./footerbg.svg');
+    background-image: url('public/footerbg.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
