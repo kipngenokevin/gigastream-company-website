@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import HewaSafi from "/hewasafi-close.png";
 import Express from "/expressway-entry.jpeg";
-import Dhow_mastercard from "../../public/mastercard-dhow.jpeg";
+import Dhow_mastercard from "/mastercard-dhow.jpeg";
 import Tolls from "/tollbooth.jpeg";
 import Hot_air from "/mastercard-balloon.jpeg";
 import Column from "/column.jpeg";
