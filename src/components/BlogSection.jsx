@@ -60,16 +60,16 @@ export default function Blog() {
 
 					{showMore && (
 						<div className='blog-animate mt-4'>
-							<p className='text-lg leading-8'>
-								<strong>
+							<p className='text-2xl leading-8'>
+								
 									Driving Business Growth through the power of
 									meaningful media experiences.
-								</strong>{" "}
+								
 								We leverage the power of location, creative, and
 								smart audience data to drive meaningful
 								connections between brands and audiences in the 
-								real world with{" "}
-								<strong>out-of-home advertising</strong>.
+								real world with
+								out-of-home advertising.
 							</p>
 						</div>
 					)}

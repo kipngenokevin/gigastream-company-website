@@ -21,11 +21,6 @@ const ModalComponent = ({
 			caption: "Hewa Safi Case Study",
 		},
 		{
-			src: "/bus-branding.png",
-			alt: "Expressway Case Study",
-			caption: "Expressway Case Study",
-		},
-		{
 			src: "/expressway-entry.jpeg",
 			alt: "Tollbooths Case Study",
 			caption: "Tollbooths Case Study",
@@ -255,9 +250,9 @@ const ModalComponent = ({
 									)}
 
 								{/* Description */}
-								<p className='text-gray-700 mb-4 leading-relaxed font-medium text-lg'>
+								{/* <p className='text-gray-700 mb-4 leading-relaxed font-medium text-lg'>
 									{description}
-								</p>
+								</p> */}
 
 								{/* More Description (Updated for BRANDING) */}
 								<div className='text-gray-600 italic text-md'>
