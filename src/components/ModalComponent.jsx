@@ -16,20 +16,26 @@ const ModalComponent = ({
 
 	const images = [
 		{
-			src: "../../public/hewasafi.png",
+			src: "../../public/hewasafi-1.png",
 			alt: "Hewa Safi Case Study",
 			caption: "Hewa Safi Case Study",
 		},
 		{
-			src: "../../public/expressway.png",
+			src: "../../public/bus-branding.png",
 			alt: "Expressway Case Study",
 			caption: "Expressway Case Study",
 		},
 		{
-			src: "../../public/branding.png",
+			src: "../../public/expressway-entry.jpeg",
 			alt: "Tollbooths Case Study",
 			caption: "Tollbooths Case Study",
 		},
+		{
+			src: "../../public/htype-barrier.png",
+			alt: "Hot Air Balloon Case Study",
+			caption: "Hot Air Balloon Case Study",
+		},
+		
 	];
 
 	const extendedImages = [...images, ...images, ...images];
@@ -158,7 +164,8 @@ const ModalComponent = ({
 							<div className='p-8 bg-gradient-to-b from-gray-50 to-white max-h-[70vh] overflow-y-auto'>
 								{/* Carousel (Hidden for BRANDING Section) */}
 								{title !== "BRANDING" &&
-									title !== "SUSTAINABILITY" && (
+									title !== "SUSTAINABILITY" &&
+									title !== "B2B/ B2C TECH SOLUTIONS" && (
 										// Carousel integration
 
 										<div
@@ -193,7 +200,7 @@ const ModalComponent = ({
 																		alt={
 																			image.alt
 																		}
-																		className='rounded-2xl w-full h-80 object-cover shadow-md transition-all duration-300'
+																		className='rounded-2xl w-full h-[450px] object-cover shadow-md transition-all duration-300'
 																	/>
 																	<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
 																		<p className='text-white text-2xl font-semibold'>

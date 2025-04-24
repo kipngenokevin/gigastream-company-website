@@ -19,7 +19,7 @@ export default function Navbar() {
 
 				<li className='d-flex align-items-center'>
 					<a
-						href='#about'
+						href='#blog'
 						className='!no-underline text-white flex items-center'>
 						ABOUT
 						<span className='material-symbols-outlined'>
@@ -27,16 +27,16 @@ export default function Navbar() {
 						</span>
 					</a>
 				</li>
-				<li className='d-flex align-items-center'>
+				{/* <li className='d-flex align-items-center'>
 					<a
-						href='#blog'
+						href='#about'
 						className='!no-underline text-white flex items-center'>
 						BLOG
 						<span className='material-symbols-outlined'>
 							keyboard_arrow_down
 						</span>
 					</a>
-				</li>
+				</li> */}
 				<li className='d-flex align-items-center'>
 					<a
 						href='#portfolio'
@@ -70,17 +70,17 @@ export default function Navbar() {
 					<a
 						href='https://www.linkedin.com/company/gigastream-media-tech-ltd'
 						target='_blank'>
-						<BsLinkedin className="social-icons w-6 h-6 text-white" />
+						<BsLinkedin className='social-icons w-6 h-6 text-white' />
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<BsTwitterX className="social-icons w-6 h-6 text-white" />
+					<a href=''>
+						<BsTwitterX className='social-icons w-6 h-6 text-white' />
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<BsFacebook className="social-icons w-6 h-6 text-white" />
+					<a href=''>
+						<BsFacebook className='social-icons w-6 h-6 text-white' />
 					</a>
 				</li>
 			</ul>

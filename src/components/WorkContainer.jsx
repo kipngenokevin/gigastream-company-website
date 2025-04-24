@@ -41,7 +41,7 @@ const WorkContainer = () => {
 		});
 	}, []);
 
-	// Branding Content (from previous implementation)
+	// Branding Content
 	const brandingContent = (
 		<div className='space-y-6'>
 			{/* Sarit Center Section */}
@@ -136,7 +136,7 @@ const WorkContainer = () => {
 					Production - 60K (Sail, 6 cushions, 6 pillows per dhow)
 				</p>
 				<p className='text-sm text-gray-600 mt-1'>
-					<strong>Locations:</strong> Lamu, Kilifi, Malindi
+					<strong>Locations:</strong> Lamu, Kilifi, Malindi, Mombasa
 				</p>
 				<div className='flex gap-3 mt-4 flex-col sm:flex-row'>
 					<div className='relative flex-1'>
@@ -163,6 +163,33 @@ const WorkContainer = () => {
 					</div>
 				</div>
 			</div>
+
+			{/* Hot Air Balloon Section */}
+			<div className='pb-5'>
+				<h2 className='text-xl font-semibold text-gray-800 mb-2'>
+					Hot Air Balloon Experience
+				</h2>
+				<p className='text-md text-gray-600 leading-relaxed'>
+					An unforgettable opportunity for audiences to engage with
+					the brand through immersive hot air balloon
+					experiences—elevating destination marketing by blending
+					adventure, storytelling, and scenic wonder into a
+					captivating brand journey.
+				</p>
+				<div className='flex justify-center mt-4'>
+					<div className='relative w-full sm:w-1/2'>
+						<img
+							src='mastercard-balloon.jpeg'
+							alt='Branded Hot Air Balloon'
+							className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
+							loading='lazy'
+						/>
+						<div className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded'>
+							Branded Hot Air Balloon{" "}
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 
@@ -174,7 +201,6 @@ const WorkContainer = () => {
 					Sustainability - Hewa Safi
 				</h2>
 				<div className='flex justify-center mt-4'>
-					<div></div>
 					<div className='w-full sm:w-2/3 h-[450px]'>
 						<Carousel
 							showThumbs={false}
@@ -232,7 +258,7 @@ const WorkContainer = () => {
 							<div>
 								<img
 									src='hewasafi-size.png'
-									alt='Hewa Safi Billboard'	
+									alt='Hewa Safi Billboard'
 									className='object-cover h-[450px] w-full'
 									loading='lazy'
 								/>
@@ -261,6 +287,77 @@ const WorkContainer = () => {
 			</div>
 		</div>
 	);
+
+	// B2B Content
+	const b2bContent = (
+		<div className='space-y-6'>
+			<div>
+				<h2 className='text-xl font-semibold text-gray-800 mb-1'>
+					B2B/ B2C Tech Solutions
+				</h2>
+				<p className='text-md text-gray-600 leading-relaxed'>
+					Experience the future of QR codes. QR-IOSITY: An AI
+					application that reimagines QR codes as a powerful tool for
+					advertising, gaming, and rewarding customer engagement.
+				</p>
+
+				<div className='flex justify-center mt-4'>
+					<div className='w-full sm:w-2/3 h-[450px]'>
+						<Carousel
+							showThumbs={false}
+							showStatus={false}
+							autoPlay
+							infiniteLoop
+							emulateTouch
+							interval={5000}
+							transitionTime={500}
+							className='rounded-lg shadow-md overflow-hidden'>
+							<div>
+								<img
+									src='b2b-1.png'
+									alt='B2B/ B2C Tech Solutions'
+									className='object-cover h-[450px] w-full'
+									loading='lazy'
+								/>
+								<p className='legend text-xs bg-black bg-opacity-50'>
+									QR-iosity
+								</p>
+							</div>
+							<div>
+								<img
+									src='b2b-2.png'
+									alt='B2B/ B2C Tech Solutions'
+									className='object-cover h-[450px] w-full'
+									loading='lazy'
+								/>
+								<p className='legend text-xs bg-black bg-opacity-50'>
+									QR-iosity{" "}
+								</p>
+							</div>
+						</Carousel>
+					</div>
+				</div>
+				<div className='mt-12'>
+					<p className='text-md text-gray-600 leading-relaxed'>
+						Our B2B/ B2C tech solutions are designed to enhance
+						engagement and drive growth. We leverage cutting-edge
+						technology to create tools that facilitate seamless
+						interactions between businesses and consumers. Our
+						solutions are tailored to meet the unique needs of
+						clients, ensuring that they can effectively connect with
+						their target audiences.
+					</p>
+					<p className='text-sm text-gray-500 italic mt-2'>
+						"Empowering businesses and consumers through technology"
+					</p>
+				</div>
+			</div>
+		</div>
+	);
+
+	// Modal Data for each work item
+	// Each object contains title, description, moreDescription, bgColor, and logo
+
 	const modalData = [
 		{
 			title: "MEDIA",
@@ -297,21 +394,7 @@ const WorkContainer = () => {
 			title: "B2B/ B2C TECH SOLUTIONS",
 			description:
 				"We build dynamic tools designed to engage audiences across diverse ecosystems, driving meaningful interactions",
-			moreDescription: (
-				<div>
-					<p className='mb-8'>
-						Our approach merges strategic insight with
-						state-of-the-art capabilities to create solutions that
-						are not only cutting-edge but also deeply resonant with
-						modern audiences—driving measurable growth, relevance,
-						and long-term success.
-					</p>
-					<ul className='list-disc inline-block text-left'>
-						<li>Hewa Safi</li>
-						<li>Rangi Safi</li>
-					</ul>
-				</div>
-			),
+			moreDescription: b2bContent,
 			bgColor: "red-bg",
 			logo: B2B,
 		},
