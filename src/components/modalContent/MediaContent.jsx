@@ -1,6 +1,7 @@
 /** @format */
 
 import { useState, useEffect, useRef } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const MediaContent = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,11 +96,11 @@ const MediaContent = () => {
 							{currentItem.title}
 						</h3>
 
-						<div className='relative w-full rounded-xl overflow-hidden shadow-lg'>
+						<div className='relative md:max-w-2xl lg:max-w-fit mx-auto rounded-xl overflow-hidden shadow-lg'>
 							{currentItem.type === "video" ? (
 								<video
 									ref={videoRef}
-									className='w-full h-auto max-h-[500px] object-contain mx-auto rounded-xl shadow-md'
+									className='w-full h-96 max-h-[500px] object-contain mx-auto rounded-xl shadow-md'
 									muted
 									playsInline
 									poster={currentItem.poster}>
@@ -113,21 +114,16 @@ const MediaContent = () => {
 								<img
 									src={currentItem.src}
 									alt={currentItem.title}
-									className='w-full h-auto max-h-[500px] object-contain mx-auto rounded-xl shadow-md'
+									className='w-full h-96 md:max-h-[500px] lg:max-h-[500px] object-contain mx-auto rounded-xl shadow-md'
 								/>
 							)}
 
 							<div className='absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4'>
-								<button
-									onClick={goToPrev}
-									className='bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70'>
-									←
-								</button>
-								<button
-									onClick={goToNext}
-									className='bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70'>
-									→
-								</button>
+								<IoIosArrowBack className="text-2xl text-white relative right-7"
+								onClick={goToPrev}
+								/>
+							<IoIosArrowForward className="text-2xl text-white relative left-7" onClick={goToNext}/>
+							
 							</div>
 						</div>
 

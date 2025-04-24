@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const B2bContent = (
 	<div className='space-y-6'>
 		<div>
-			<p className='text-gray-700 mb-4 leading-relaxed font-medium text-lg'>
+			<p className='text-gray-700 mb-4 leading-relaxed font-medium text-md md:text-lg lg:text-xl'>
 				Experience the future of QR codes. QR-IOSITY: An AI application
 				that reimagines QR codes as a powerful tool for advertising,
 				gaming, and rewarding customer engagement.
@@ -26,7 +26,7 @@ const B2bContent = (
 							<img
 								src='b2b-1.png'
 								alt='B2B/ B2C Tech Solutions'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -37,7 +37,7 @@ const B2bContent = (
 							<img
 								src='b2b-2.png'
 								alt='B2B/ B2C Tech Solutions'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>

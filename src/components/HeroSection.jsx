@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Arrow from "../../public/arrow.svg";
-import { BiRightArrow } from "react-icons/bi";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function HeroSection() {
 	const [text, setText] = useState(true);
@@ -38,18 +38,14 @@ export default function HeroSection() {
 			id='home'
 			className='container d-flex justify-content-between align-items-center hero-main'>
 			<div className='d-flex justify-content-start align-items-center'>
-				<span
-					className='material-symbols-outlined arrows'
-					onClick={handleClick}>
-					arrow_back_ios
-				</span>
+				<IoIosArrowBack className="text-3xl" />
 			</div>
 			<div className='col-sm-6 d-flex-justify-content-start'>
-				<h1 className={`hero-title ${isVisible ? "active" : ""}`}>
+				<h1 className={`hero-title ${isVisible ? "active" : ""} text-4xl md:text-5xl lg:text-6xl font-bold`}>
 					{text ? "AMPLYFYING BRANDS" : "ENGAGING AUDIENCES"}
 				</h1>
 				<div className='in-touch-btn'>
-					<a href='#contacts ' className="no-underline!">
+					<a href='#contacts ' className='no-underline!'>
 						<button className='flex items-center gap-4 group '>
 							GET IN TOUCH
 							<BsArrowRight className='text-2xl group-hover:translate-x-3 transition duration-300' />
@@ -58,11 +54,7 @@ export default function HeroSection() {
 				</div>
 			</div>
 			<div className='col-sm-2 d-flex justify-content-end align-items-center'>
-				<span
-					className='material-symbols-outlined arrows'
-					onClick={handleClick}>
-					arrow_forward_ios
-				</span>
+				<IoIosArrowForward onClick={handleClick} className='text-3xl' />
 			</div>
 		</section>
 	);

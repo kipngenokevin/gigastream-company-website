@@ -18,7 +18,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 						<img
 							src='branded_sarit_reception.png'
 							alt='Branded Reception Area at Sarit Center'
-							className='max-w-xl h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
+							className='w-[400px] md:max-w-xl lg:max-w-xl h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
 						/>
 						<div className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded'>

@@ -62,7 +62,7 @@ export default function Clients() {
 					<div className='carousel-container'>
 						<div className='overflow-hidden'>
 							<div
-								className='clients-container flex gap-54 mt-4 items-center'
+								className='clients-container flex gap-24 md:gap-54 lg:gap-54 mt-4 items-center'
 								ref={logosRef}>
 								{extendedBrandLogos.map((src, index) => (
 									<img

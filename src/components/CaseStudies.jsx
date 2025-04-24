@@ -106,7 +106,7 @@ export default function CaseStudies() {
 							}}>
 							{extendedImages.map((image, index) => {
 								const distance = Math.abs(index - currentIndex);
-								const isCenter = distance === 7;
+								const isCenter = window.innerWidth < 640 ? distance === 8 : distance === 7;
 								const isAdjacent = distance === 1;
 
 								return (
@@ -178,26 +178,6 @@ export default function CaseStudies() {
 							/>
 						</svg>
 					</button>
-
-					{/* Dots Indicator for Mobile */}
-					{/* <div className='flex justify-center mt-4 space-x-2 md:hidden'>
-						{Array.from({ length: images.length }).map((_, i) => (
-							<button
-								key={i}
-								onClick={() =>
-									setCurrentIndex(i + images.length)
-								}
-								className={`h-2 rounded-full transition-all ${
-									Math.floor(
-										currentIndex % images.length === i
-									)
-										? "w-4 bg-gray-800"
-										: "w-2 bg-gray-400"
-								}`}
-								aria-label={`Go to slide ${i + 1}`}
-							/>
-						))}
-					</div> */}
 				</div>
 			</div>
 		</section>

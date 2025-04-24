@@ -23,7 +23,7 @@ const SustainabilityContent = (
 							<img
 								src='hewasafi-1.png'
 								alt='Hewa Safi Billboard'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -34,7 +34,7 @@ const SustainabilityContent = (
 							<img
 								src='hewasafi-fabric.png'
 								alt='Hewa Safi Fabric design'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -45,7 +45,7 @@ const SustainabilityContent = (
 							<img
 								src='hewasafi-analysis.png'
 								alt='Hewa Safi Effectiveness Analysis'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -56,7 +56,7 @@ const SustainabilityContent = (
 							<img
 								src='hewasafi-test.png'
 								alt='Hewa Safi Billboard'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -67,7 +67,7 @@ const SustainabilityContent = (
 							<img
 								src='hewasafi-size.png'
 								alt='Hewa Safi Billboard'
-								className='object-cover h-[450px] w-full'
+								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
 							/>
 							<p className='legend text-xs bg-black bg-opacity-50'>
@@ -77,7 +77,7 @@ const SustainabilityContent = (
 					</Carousel>
 				</div>
 			</div>
-			<div className='mt-12'>
+			<div className='md:mt-12 lg:mt-12'>
 				<p className='text-md text-gray-600 leading-relaxed'>
 					Hewa Safi is an innovative patented printable panel designed
 					to absorb and disaggregate harmful particles in the air,
@@ -103,7 +103,7 @@ const SustainabilityContent = (
 					<img
 						src='rangi-safi.png'
 						alt='Rangi Safi Painting'
-						className='max-w-7xl h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
+						className='min-w-[300px]  md:w-full lg:w-full md:h-96 lg:h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 '
 						loading='lazy'
 					/>
 					<div className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded'>
@@ -111,7 +111,7 @@ const SustainabilityContent = (
 					</div>
 				</div>
 			</div>
-			<p className="text-md text-gray-600 leading-relaxed mt-4 ">
+			<p className='text-md text-gray-600 leading-relaxed mt-4 '>
 				Rangi Safi is an eco-friendly, self-cleaning paint that improves
 				indoor air quality by eliminating up to 88.8% of pollutants like
 				NOx, SOx, PM10, PM2.5, VOCs, and CO. It repels dust, dirt, and
