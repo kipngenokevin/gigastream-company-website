@@ -3,18 +3,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import HewaSafi from "/hewasafi-close.png";
 import Express from "/expressway-entry.jpeg";
-import Dhow_mastercard from "../../public/mastercard-dhow.jpeg"
+import Dhow_mastercard from "../../public/mastercard-dhow.jpeg";
 import Tolls from "/tollbooth.jpeg";
-import Hot_air from "/mastercard-balloon.jpeg"
-import Column from "/column.jpeg"
-import Dhow from "/dtb-dhow.png"
-import Cushion_branding from "/branded-cushions.png"
-
-
+import Hot_air from "/mastercard-balloon.jpeg";
+import Column from "/column.jpeg";
+import Dhow from "/dtb-dhow.png";
+import Cushion_branding from "/branded-cushions.png";
 
 export default function CaseStudies() {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [isHovered] = useState(false);
+	const [isHovered, setIsHovered] = useState(false);
+	const [slidesToShow, setSlidesToShow] = useState(3);
 	const carouselRef = useRef(null);
 
 	const images = [
@@ -28,8 +27,32 @@ export default function CaseStudies() {
 		{ src: Dhow_mastercard, alt: "Dhow Mastercard Case Study" },
 	];
 
+	// Duplicate images to create an infinite carousel effect
 	const extendedImages = [...images, ...images, ...images];
 
+	// Update slidesToShow based on screen width
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 640) {
+				setSlidesToShow(1);
+			} else if (window.innerWidth < 1024) {
+				setSlidesToShow(2);
+			} else {
+				setSlidesToShow(3);
+			}
+		};
+
+		// Initial setup
+		handleResize();
+
+		// Add event listener
+		window.addEventListener("resize", handleResize);
+
+		// Clean up
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	// Auto-rotate carousel when not hovered
 	useEffect(() => {
 		if (!isHovered) {
 			const timer = setInterval(() => {
@@ -39,6 +62,7 @@ export default function CaseStudies() {
 		}
 	}, [images.length, isHovered]);
 
+	// Reset to middle set of images for seamless infinite scrolling
 	useEffect(() => {
 		if (currentIndex === 0) {
 			setTimeout(() => setCurrentIndex(images.length), 0);
@@ -58,19 +82,26 @@ export default function CaseStudies() {
 	};
 
 	return (
-		<section id="portfolio" className='case-section py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
+		<section
+			id='portfolio'
+			className='case-section py-8 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
 			<div className='container mx-auto px-4'>
-				<h2 className='title text-center'>Latest Case Studies</h2>
+				<h2 className='title text-center text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12'>
+					Latest Case Studies
+				</h2>
 
 				<div
 					className='relative max-w-7xl mx-auto group'
-					ref={carouselRef}>
+					ref={carouselRef}
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}>
 					<div className='overflow-hidden rounded-xl shadow-xl'>
 						<div
 							className='flex transition-transform duration-1000 ease-in-out'
 							style={{
 								transform: `translateX(-${
-									(currentIndex - images.length) * (100 / 3)
+									((currentIndex - images.length) * 100) /
+									slidesToShow
 								}%)`,
 							}}>
 							{extendedImages.map((image, index) => {
@@ -81,22 +112,25 @@ export default function CaseStudies() {
 								return (
 									<div
 										key={index}
-										className='w-1/3 flex-shrink-0 flex justify-center items-center'>
+										className={`flex-shrink-0 flex justify-center items-center transition-all duration-300`}
+										style={{
+											width: `${100 / slidesToShow}%`,
+										}}>
 										<div
-											className={`relative p-4 transition-all duration-700 ${
+											className={`relative p-2 md:p-4 transition-all duration-700 ${
 												isCenter
 													? "scale-100 opacity-100"
 													: isAdjacent
-													? "scale-75 opacity-70"
-													: "scale-60 opacity-40"
+													? "scale-90 md:scale-75 opacity-80 md:opacity-70"
+													: "scale-80 md:scale-60 opacity-60 md:opacity-40"
 											}`}>
 											<img
 												src={image.src}
 												alt={image.alt}
-												className='rounded-2xl w-full h-120 object-cover shadow-md'
+												className='rounded-lg md:rounded-2xl w-full h-96 sm:h-64 md:h-80 lg:h-120 object-cover shadow-md'
 											/>
-											<div className='absolute inset-0 rounded-2xl bg-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
-												<p className='text-white text-xl font-semibold'>
+											<div className='absolute inset-0 rounded-lg md:rounded-2xl bg-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+												<p className='text-white text-sm md:text-lg lg:text-xl font-semibold text-center px-2'>
 													{image.alt}
 												</p>
 											</div>
@@ -107,41 +141,63 @@ export default function CaseStudies() {
 						</div>
 					</div>
 
-					{/* Navigation Buttons */}
+					{/* Navigation Buttons - Hidden on smallest screens */}
 					<button
 						onClick={goToPrevious}
-						className='absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+						className='absolute left-1 md:left-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-2 md:p-3 rounded-xl transition-all duration-300 z-10 opacity-70 md:opacity-0 group-hover:opacity-100 '
+						aria-label='Previous slide'>
 						<svg
-							className='w-6 h-6 text-gray-100'
+							className='w-4 h-4 md:w-6 md:h-6 text-gray-900'
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'>
 							<path
 								d='M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5'
-								stroke='#000000'
-								stroke-width='1.5'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								stroke='currentColor'
+								strokeWidth='1.5'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							/>
 						</svg>
 					</button>
 					<button
 						onClick={goToNext}
-						className='absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-3 rounded-full transition-all duration-300 z-10 group-hover:opacity-100 opacity-0'>
+						className='absolute right-1 md:right-4 top-1/2 -translate-y-1/2 bg-white shadow-md hover:scale-110 p-2 md:p-3 rounded-full transition-all duration-300 z-10 opacity-70 md:opacity-0 group-hover:opacity-100'
+						aria-label='Next slide'>
 						<svg
-							className='w-6 h-6 text-gray-100'
+							className='w-4 h-4 md:w-6 md:h-6 text-gray-900'
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'>
 							<path
 								d='M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19'
-								stroke='#000000'
-								stroke-width='1.5'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								stroke='currentColor'
+								strokeWidth='1.5'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							/>
 						</svg>
 					</button>
+
+					{/* Dots Indicator for Mobile */}
+					{/* <div className='flex justify-center mt-4 space-x-2 md:hidden'>
+						{Array.from({ length: images.length }).map((_, i) => (
+							<button
+								key={i}
+								onClick={() =>
+									setCurrentIndex(i + images.length)
+								}
+								className={`h-2 rounded-full transition-all ${
+									Math.floor(
+										currentIndex % images.length === i
+									)
+										? "w-4 bg-gray-800"
+										: "w-2 bg-gray-400"
+								}`}
+								aria-label={`Go to slide ${i + 1}`}
+							/>
+						))}
+					</div> */}
 				</div>
 			</div>
 		</section>

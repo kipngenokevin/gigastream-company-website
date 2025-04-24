@@ -364,19 +364,80 @@ const WorkContainer = () => {
 			description:
 				"We deliver innovative solutions through our connected network, ensuring cutting-edge reach and impact",
 			moreDescription: (
-				<div>
-					<p className='mb-8'>
-						Our approach merges strategic insight with
-						state-of-the-art capabilities to create solutions that
-						are not only cutting-edge but also deeply resonant with
-						modern audiences—driving measurable growth, relevance,
-						and long-term success.
-					</p>
-					<ul className='list-disc inline-block text-left'>
-						<li>Connected Q-riosity</li>
-						<li>Media concessions – Moja Expressway/ DOOH</li>
-						<li>Outdoor Auditing</li>
-					</ul>
+				<div className='space-y-6'>
+					{/* Featured Video Section */}
+					<div className='mb-8'>
+						<h3 className='text-lg md:text-xl font-semibold text-gray-800 mb-3'>
+							Media in Cinemax
+						</h3>
+						<div className='relative w-full rounded-xl overflow-hidden shadow-lg'>
+							<video
+								className='w-full aspect-video'
+								controls
+								poster='/cinemax-screen-2.jpeg'>
+								<source
+									src='/cinemax-nhc.mp4'
+									type='video/mp4'
+								/>
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<p className='text-sm text-gray-500 italic mt-2 text-center'>
+							Innovative digital media solutions in Cinemax 
+						</p>
+					</div>
+
+					{/* Text and Image Side by Side Section */}
+					<div className='flex flex-col md:flex-row gap-6 items-center mb-8'>
+						<div className='md:w-1/2 space-y-4'>
+							<p className='text-sm md:text-base text-gray-700 leading-relaxed'>
+								Our approach merges strategic insight with
+								state-of-the-art capabilities to create
+								solutions that are not only cutting-edge but
+								also deeply resonant with modern
+								audiences—driving measurable growth, relevance,
+								and long-term success.
+							</p>
+
+							<div className='bg-gray-50 p-4 rounded-lg border-l-4 border-red-500'>
+								<h4 className='font-medium text-gray-800'>
+									Our Media Solutions:
+								</h4>
+								<ul className='list-disc pl-5 mt-2 space-y-1 text-sm md:text-base'>
+									<li>Connected Q-riosity</li>
+									<li>
+										Media concessions – Moja Expressway/
+										DOOH
+									</li>
+									<li>Outdoor Auditing</li>
+								</ul>
+							</div>
+						</div>
+
+						<div className='md:w-1/2'>
+							<div className='relative rounded-xl overflow-hidden shadow-lg'>
+								<img
+									src='/column.jpeg'
+									alt='Digital Column Display'
+									className='w-full h-56 md:h-64 lg:h-72 object-cover'
+									loading='lazy'
+								/>
+								<div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-3 px-4'>
+									<p className='text-white text-sm font-medium'>
+										Digital Column Display Technology
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Call to Action */}
+					<div className='bg-gradient-to-r from-red-50 to-red-100 p-4 md:p-6 rounded-xl text-center'>
+						<p className='text-sm md:text-base font-medium text-gray-800'>
+							Discover how our media solutions can amplify your
+							brand's presence across digital and physical spaces.
+						</p>
+					</div>
 				</div>
 			),
 			bgColor: "red-bg",

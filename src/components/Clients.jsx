@@ -53,9 +53,10 @@ export default function Clients() {
 						Our Clients
 					</h2>
 					<p className='text-center clients-title'>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-						dolore
+						We’ve worked with leading brands across various
+						industries, delivering impactful out-of-home media
+						experiences that drive results and create real-world
+						impact.
 					</p>
 
 					<div className='carousel-container'>

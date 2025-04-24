@@ -16,22 +16,22 @@ const ModalComponent = ({
 
 	const images = [
 		{
-			src: "../../public/hewasafi-1.png",
+			src: "/hewasafi-1.png",
 			alt: "Hewa Safi Case Study",
 			caption: "Hewa Safi Case Study",
 		},
 		{
-			src: "../../public/bus-branding.png",
+			src: "/bus-branding.png",
 			alt: "Expressway Case Study",
 			caption: "Expressway Case Study",
 		},
 		{
-			src: "../../public/expressway-entry.jpeg",
+			src: "/expressway-entry.jpeg",
 			alt: "Tollbooths Case Study",
 			caption: "Tollbooths Case Study",
 		},
 		{
-			src: "../../public/htype-barrier.png",
+			src: "/htype-barrier.png",
 			alt: "Hot Air Balloon Case Study",
 			caption: "Hot Air Balloon Case Study",
 		},
