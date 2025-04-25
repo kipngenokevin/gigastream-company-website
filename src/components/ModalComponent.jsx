@@ -16,21 +16,20 @@ const ModalComponent = ({
 
 	const images = [
 		{
-			src: "/hewasafi-1.png",
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561381/hewasafi-1_q8zqar.png",
 			alt: "Hewa Safi Case Study",
 			caption: "Hewa Safi Case Study",
 		},
 		{
-			src: "/expressway-entry.jpeg",
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561593/expressway-entry_usacbn.jpg",
 			alt: "Tollbooths Case Study",
 			caption: "Tollbooths Case Study",
 		},
 		{
-			src: "/htype-barrier.png",
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561377/htype-barrier_fsdvtb.png",
 			alt: "Hot Air Balloon Case Study",
 			caption: "Hot Air Balloon Case Study",
 		},
-		
 	];
 
 	const extendedImages = [...images, ...images, ...images];

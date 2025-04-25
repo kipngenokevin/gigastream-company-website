@@ -1,9 +1,11 @@
 /** @format */
 import React, { useEffect, useRef } from "react";
+//Icons/
 import AdsLogo from "/adicon.png";
 import Sustain from "/sustainabilityicon.png";
 import Branding from "/brandingicon.png";
 import B2B from "/b2bicon.png";
+
 import ModalComponent from "./ModalComponent";
 import MediaContent from "./modalContent/MediaContent";
 import sustainabilityContent from "./modalContent/SustainabilityContent";

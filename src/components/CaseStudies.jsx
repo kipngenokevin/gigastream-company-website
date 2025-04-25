@@ -1,14 +1,6 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from "react";
-import HewaSafi from "/hewasafi-close.png";
-import Express from "/expressway-entry.jpeg";
-import Dhow_mastercard from "../../public/mastercard-dhow.jpeg";
-import Tolls from "/tollbooth.jpeg";
-import Hot_air from "/mastercard-balloon.jpeg";
-import Column from "/column.jpeg";
-import Dhow from "/dtb-dhow.png";
-import Cushion_branding from "/branded-cushions.png";
 
 export default function CaseStudies() {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,14 +9,38 @@ export default function CaseStudies() {
 	const carouselRef = useRef(null);
 
 	const images = [
-		{ src: HewaSafi, alt: "Hewa Safi Case Study" },
-		{ src: Express, alt: "Expressway Case Study" },
-		{ src: Tolls, alt: "Tollbooths Case Study" },
-		{ src: Hot_air, alt: "Hot Air Balloon Case Study" },
-		{ src: Column, alt: "Column Case Study" },
-		{ src: Dhow, alt: "Dhow Case Study" },
-		{ src: Cushion_branding, alt: "Cushion Branding Case Study" },
-		{ src: Dhow_mastercard, alt: "Dhow Mastercard Case Study" },
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561380/hewasafi-close_humf1x.png",
+			alt: "Hewa Safi Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561593/expressway-entry_usacbn.jpg",
+			alt: "Expressway Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561592/tollbooth_oyokse.jpg",
+			alt: "Tollbooths Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561376/mastercard-balloon_uoorcv.jpg",
+			alt: "Hot Air Balloon Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561594/column_b2cses.jpg",
+			alt: "Column Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561594/dtb-dhow_jjfwu4.png",
+			alt: "Dhow Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561469/branded-cushions_pn4crc.png",
+			alt: "Cushion Branding Case Study",
+		},
+		{
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561376/mastercard-dhow_yxkoeu.jpg",
+			alt: "Dhow Mastercard Case Study",
+		},
 	];
 
 	// Duplicate images to create an infinite carousel effect

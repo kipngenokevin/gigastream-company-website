@@ -1,8 +1,7 @@
 /** @format */
 
 import { useState, useEffect } from "react";
-import Arrow from "../../public/arrow.svg";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function HeroSection() {

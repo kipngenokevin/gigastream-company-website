@@ -1,6 +1,6 @@
 import Map from "./components/Map"
-import Mail from "../public/mail.svg"
-import Phone from "../public/phone.svg"
+import { FiMail } from "react-icons/fi"
+import { PiPhoneCall } from "react-icons/pi"
 
 export default function Footer () {
     return (
@@ -10,14 +10,14 @@ export default function Footer () {
                 <Map />
                 <div className="d-flex contact-section justify-content-around align-items-center">
                     <div className="d-flex align-items-center contact-item">
-                        <img src={Mail} alt="" width={40} />
+                        <FiMail className="text-4xl" width={40} />
                         <div className="text-left">
                             <h6>Mail us at</h6>
                             <p>info@gigastreammedia.com</p>
                         </div>
                     </div>
                     <div className="d-flex align-items-center contact-item">
-                        <img src={Phone} alt="" width={40} />
+                        <PiPhoneCall className="text-4xl" width={40} />
                         <div className="text-left">
                             <h6>Call us at</h6>
                             <p>0726 002 601</p>

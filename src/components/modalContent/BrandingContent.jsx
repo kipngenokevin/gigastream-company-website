@@ -16,9 +16,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 				<div className='flex justify-center mt-4'>
 					<div className='relative w-full sm:w-1/2'>
 						<img
-							src='branded_sarit_reception.png'
+							src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561469/branded_sarit_reception_fea0ra.png'
 							alt='Branded Reception Area at Sarit Center'
-							className='w-[400px] md:max-w-xl lg:max-w-xl h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
+							className='w-[400px] md:w-[600px] lg:w-[800px] h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
 						/>
 						<div className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded'>
@@ -40,7 +40,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 				<div className='flex justify-center mt-4'>
 					<div className='relative w-full sm:w-1/2'>
 						<img
-							src='branded_bowling.png'
+							src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561470/branded_bowling_mwscyg.png'
 							alt='Branded Bowling Lanes at Sarit Center'
 							className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
@@ -69,7 +69,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 				<div className='flex justify-center mt-4'>
 					<div className='relative w-full sm:w-1/2'>
 						<img
-							src='cinemax.jpeg'
+							src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561466/cinemax_qv8yqj.jpg '
 							alt='IMAX Theater at Century Cinemax'
 							className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
@@ -91,14 +91,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 					experience that resonates with niche consumers for
 					destination marketing, keeping the brand top of mind.
 				</p>
-				
+
 				<p className='text-sm text-gray-600 mt-1'>
 					<strong>Locations:</strong> Coastal Region
 				</p>
 				<div className='flex gap-3 mt-4 flex-col sm:flex-row'>
 					<div className='relative flex-1'>
 						<img
-							src='dtb-dhow.png'
+							src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561594/dtb-dhow_jjfwu4.png'
 							alt='Branded sails on the beach'
 							className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
@@ -109,7 +109,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 					</div>
 					<div className='relative flex-1'>
 						<img
-							src='mastercard-dhow.jpeg'
+							src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561376/mastercard-dhow_yxkoeu.jpg'
 							alt='Branded Dhows on the Beach'
 							className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 							loading='lazy'
@@ -139,14 +139,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 							showThumbs={false}
 							showStatus={true}
 							autoPlay
-              infiniteLoop
-              emulateTouch
+							infiniteLoop
+							emulateTouch
 							interval={3000}
 							transitionTime={500}
 							className='rounded-lg shadow-md overflow-hidden'>
 							<div>
 								<img
-									src='mastercard-balloon.jpeg'
+									src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561376/mastercard-balloon_uoorcv.jpg'
 									alt='Branded Hot Air Balloon'
 									className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300'
 									loading='lazy'
@@ -154,7 +154,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 							</div>
 							<div>
 								<img
-									src='hot-air.png'
+									src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561377/hot-air_w8rwgm.png'
 									alt='Branded Hot Air Balloon'
 									className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 object-bottom'
 									loading='lazy'
@@ -162,7 +162,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 							</div>
 							<div>
 								<img
-									src='hot-air-2.png'
+									src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561378/hot-air-2_ljjcyo.png'
 									alt='Branded Hot Air Balloon'
 									className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 object-top'
 									loading='lazy'
@@ -170,7 +170,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 							</div>
 							<div>
 								<img
-									src='hot-air-3.png'
+									src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561377/hot-air-3_xxupoq.png'
 									alt='Branded Hot Air Balloon'
 									className='w-full h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 '
 									loading='lazy'

@@ -10,33 +10,33 @@ const MediaContent = () => {
 	const mediaItems = [
 		{
 			type: "video",
-			src: "/cinemax-screen-1.mp4",
+			src: "https://res.cloudinary.com/dipqldzry/video/upload/v1745561468/cinemax-screen-1_dixdis.mp4",
 			poster: "/api/placeholder/640/360",
 			title: "Media in Cinemax",
 			description: "Innovative digital media solutions in Cinemax",
 		},
 		{
 			type: "image",
-			src: "/cinemax-1.jpeg",
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561467/cinemax-1_vw8maw.jpg",
 			title: "Junction LED Screen",
 			description: "Innovative digital media solutions in Cinemax",
 		},
 		{
 			type: "video",
-			src: "/cinemax-screen-2.mp4",
+			src: "https://res.cloudinary.com/dipqldzry/video/upload/v1745561466/cinemax-screen-2_oqwtfa.mp4",
 			poster: "/api/placeholder/640/360",
 			title: "Junction LED Screen",
 			description: "Innovative digital media solutions in Cinemax",
 		},
 		{
 			type: "image",
-			src: "/cinemax-screen-2.jpeg",
+			src: "https://res.cloudinary.com/dipqldzry/image/upload/v1745561466/cinemax-screen-2_qgor8x.jpg",
 			title: "Media Concessions",
 			description: "Innovative digital media solutions in Cinemax",
 		},
 		{
 			type: "video",
-			src: "/cinemax-screen-3.mp4",
+			src: "https://res.cloudinary.com/dipqldzry/video/upload/v1745561467/cinemax-screen-3_tlkfii.mp4",
 			poster: "/api/placeholder/640/360",
 			title: "Media in Cinemax",
 			description: "Innovative digital media solutions in Cinemax",

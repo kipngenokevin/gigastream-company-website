@@ -1,5 +1,4 @@
 /** @format */
-"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,7 +10,7 @@ export default function Clients() {
 	const logosRef = useRef(null);
 
 	const brandLogos = [
-		"/ArtCaffe.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745561473/ArtCaffe_txmznp.png",
 		"https://radissonblu-menu.Ubuntu.click/images/logo.png",
 		"https://artcaffemenu.Ubuntu.click/images/SAF-MAIN-LOGO.png",
 		"https://cdn-webportal.airtelstream.net/website/kenya/assets/images/logo.svg",

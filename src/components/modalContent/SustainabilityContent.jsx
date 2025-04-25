@@ -21,7 +21,7 @@ const SustainabilityContent = (
 						className='rounded-lg shadow-md overflow-hidden'>
 						<div>
 							<img
-								src='hewasafi-1.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561381/hewasafi-1_q8zqar.png'
 								alt='Hewa Safi Billboard'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -32,7 +32,7 @@ const SustainabilityContent = (
 						</div>
 						<div>
 							<img
-								src='hewasafi-fabric.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561380/hewasafi-fabric_ff0xme.png'
 								alt='Hewa Safi Fabric design'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -43,7 +43,7 @@ const SustainabilityContent = (
 						</div>
 						<div>
 							<img
-								src='hewasafi-analysis.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561380/hewasafi-analysis_panymo.png'
 								alt='Hewa Safi Effectiveness Analysis'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -54,7 +54,7 @@ const SustainabilityContent = (
 						</div>
 						<div>
 							<img
-								src='hewasafi-test.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561379/hewasafi-test_uaafpj.png'
 								alt='Hewa Safi Billboard'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -65,7 +65,7 @@ const SustainabilityContent = (
 						</div>
 						<div>
 							<img
-								src='hewasafi-size.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561380/hewasafi-size_p6r1l2.png'
 								alt='Hewa Safi Billboard'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -101,7 +101,7 @@ const SustainabilityContent = (
 			<div className='flex justify-center mt-4'>
 				<div className='relative w-full sm:w-1/2'>
 					<img
-						src='rangi-safi.png'
+						src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561377/rangi-safi_bdqtva.png'
 						alt='Rangi Safi Painting'
 						className='min-w-[300px]  md:w-full lg:w-full md:h-96 lg:h-96 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 '
 						loading='lazy'

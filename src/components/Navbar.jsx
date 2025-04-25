@@ -1,6 +1,12 @@
 /** @format */
 
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import {
+	BsFacebook,
+	BsInstagram,
+	BsLinkedin,
+	BsTwitterX,
+} from "react-icons/bs";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Navbar() {
 	return (
@@ -11,9 +17,7 @@ export default function Navbar() {
 						href='#home'
 						className='!no-underline text-white flex items-center'>
 						HOME
-						<span className='material-symbols-outlined ml-1'>
-							keyboard_arrow_down
-						</span>
+						<IoIosArrowDown className='text-xl font-semibold' />
 					</a>
 				</li>
 
@@ -22,9 +26,7 @@ export default function Navbar() {
 						href='#blog'
 						className='!no-underline text-white flex items-center'>
 						ABOUT
-						<span className='material-symbols-outlined'>
-							keyboard_arrow_down
-						</span>
+						<IoIosArrowDown className='text-xl font-semibold' />
 					</a>
 				</li>
 				{/* <li className='d-flex align-items-center'>
@@ -32,9 +34,8 @@ export default function Navbar() {
 						href='#about'
 						className='!no-underline text-white flex items-center'>
 						BLOG
-						<span className='material-symbols-outlined'>
-							keyboard_arrow_down
-						</span>
+												<IoIosArrowDown className='material-symbols-outlined' />
+
 					</a>
 				</li> */}
 				<li className='d-flex align-items-center'>
@@ -42,9 +43,7 @@ export default function Navbar() {
 						href='#portfolio'
 						className='!no-underline text-white flex items-center'>
 						PORTFOLIO
-						<span className='material-symbols-outlined'>
-							keyboard_arrow_down
-						</span>
+						<IoIosArrowDown className='text-xl font-semibold' />
 					</a>
 				</li>
 				<li className='d-flex align-items-center'>
@@ -52,9 +51,7 @@ export default function Navbar() {
 						href='#contacts'
 						className='!no-underline text-white flex items-center'>
 						CONTACTS
-						<span className='material-symbols-outlined'>
-							keyboard_arrow_down
-						</span>
+						<IoIosArrowDown className='text-xl font-semibold' />
 					</a>
 				</li>
 			</ul>

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Gradient from "../../public/gradient.svg";
 import { BsArrowRight } from "react-icons/bs";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -47,7 +46,7 @@ export default function Blog() {
 			<div className='container'>
 				<div className='col-sm-6'>
 					<img
-						src={Gradient}
+						src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561487/gradient_fu2hhh.svg'
 						alt='gradient'
 						className='img-fluid blog-animate'
 					/>

@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section {
-    background: url('public/herobackground.svg');
+    background: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561487/herobackground_smdttn.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,7 +157,7 @@ nav ul li {
 }
 
 .work-section {
-    background-image: url('public/workbg.png');
+    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -166,7 +166,7 @@ nav ul li {
 }
 
 .blog-section {
-    background-image: url('public/blogbg.png');
+    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561493/blogbg_oxd38g.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -175,7 +175,7 @@ nav ul li {
 }
 
 .case-section {
-    background-image: url('public/casebg.png');
+    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561492/casebg_gkgcdm.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +184,7 @@ nav ul li {
 }
 
 .clients-section {
-    background-image: url('public/workbg.png');
+    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -220,7 +220,7 @@ nav ul li {
 }
 
 footer {
-    background-image: url('public/footerbg.svg');
+    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561490/footerbg_ygciuh.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
