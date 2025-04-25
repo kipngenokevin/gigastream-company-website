@@ -1,20 +1,7 @@
 /** @format */
-import React, { useEffect } from "react";
-import { useRef } from "react";
-import gsap from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-gsap.registerPlugin(TextPlugin);
+import React from "react";
 
 export default function Scroll() {
-	const textRef = useRef(null);
-	useEffect(() => {
-		gsap.to(textRef.current, {
-			text: "SCROLL DOWN",
-			duration: 3,
-			ease: "power2.inOut",
-			delay:2,
-		});
-	}, []);
 	return (
 		<div className='col-sm-12 d-flex justify-content-center'>
 			<div className='text-center'>
@@ -27,7 +14,7 @@ export default function Scroll() {
 						style={{ margin: "1rem" }}
 					/>
 				</div>
-				<h5 ref={textRef}>WELCOME !!!</h5>
+				<h5>SCROLL DOWN</h5>
 			</div>
 		</div>
 	);

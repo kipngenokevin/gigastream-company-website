@@ -12,28 +12,18 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState(null);
 
-	// Handle dropdown toggle for mobile
-	const toggleDropdown = (menu) => {
-		if (activeDropdown === menu) {
-			setActiveDropdown(null);
-		} else {
-			setActiveDropdown(menu);
-		}
-	};
-
-	// Handle mobile menu toggle
 	const toggleMenu = () => {
-		setIsOpen(!isOpen);
-		if (!isOpen) {
-			document.body.style.overflow = "hidden";
-		} else {
-			document.body.style.overflow = "auto";
-		}
+		const newState = !isOpen;
+		setIsOpen(newState);
+		document.body.style.overflow = newState ? "hidden" : "auto";
 	};
 
-	// Close mobile menu when screen size changes to desktop
+	const handleLinkClick = () => {
+		setIsOpen(false);
+		document.body.style.overflow = "auto";
+	};
+
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth >= 992 && isOpen) {
@@ -41,68 +31,39 @@ export default function Navbar() {
 				document.body.style.overflow = "auto";
 			}
 		};
-
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, [isOpen]);
 
 	return (
 		<>
-			{/* Mobile menu button - only visible on mobile */}
+			{/* Mobile menu button */}
 			<div className='d-lg-none d-flex justify-content-end p-3 relative top-[-70px]'>
 				<button
 					onClick={toggleMenu}
-					className='bg-transparent border-0 text-white '
+					className='bg-transparent border-0 text-white'
 					aria-label='Toggle Menu'>
-					<RiMenu3Line className='w-8 h-8 ' />
+					<RiMenu3Line className='w-8 h-8' />
 				</button>
 			</div>
 
-		
+			{/* Desktop nav */}
 			<nav className='justify-content-between desktop-nav d-none d-lg-flex'>
 				<ul className='d-flex justify-content-between align-items-center flex-grow-1'>
-					<li className='flex items-center'>
-						<a
-							href='#home'
-							className='!no-underline text-white flex items-center'>
-							HOME
-							<IoIosArrowDown className='text-xl font-semibold' />
-						</a>
-					</li>
-
-					<li className='d-flex align-items-center'>
-						<a
-							href='#blog'
-							className='!no-underline text-white flex items-center'>
-							ABOUT
-							<IoIosArrowDown className='text-xl font-semibold' />
-						</a>
-					</li>
-					{/* <li className='d-flex align-items-center'>
-            <a
-              href='#about'
-              className='!no-underline text-white flex items-center'>
-              BLOG
-                        <IoIosArrowDown className='material-symbols-outlined' />
-
-            </a>
-          </li> */}
-					<li className='d-flex align-items-center'>
-						<a
-							href='#portfolio'
-							className='!no-underline text-white flex items-center'>
-							PORTFOLIO
-							<IoIosArrowDown className='text-xl font-semibold' />
-						</a>
-					</li>
-					<li className='d-flex align-items-center'>
-						<a
-							href='#contacts'
-							className='!no-underline text-white flex items-center'>
-							CONTACTS
-							<IoIosArrowDown className='text-xl font-semibold' />
-						</a>
-					</li>
+					{["home", "blog", "portfolio", "contacts"].map(
+						(section) => (
+							<li
+								key={section}
+								className='d-flex align-items-center'>
+								<a
+									href={`#${section}`}
+									className='!no-underline text-white flex items-center'>
+									{section.toUpperCase()}
+									<IoIosArrowDown className='text-xl font-semibold' />
+								</a>
+							</li>
+						)
+					)}
 				</ul>
 				<ul className='d-flex justify-content-end'>
 					<li>
@@ -149,170 +110,28 @@ export default function Navbar() {
 						</button>
 					</div>
 
-					{/* Mobile Navigation Items */}
+					{/* Navigation Links */}
 					<ul className='list-unstyled mb-5'>
-						<li className='mb-4 pb-3 border-bottom border-secondary'>
-							<div
-								className='d-flex justify-content-between align-items-center text-white'
-								onClick={() => toggleDropdown("HOME")}>
+						{[
+							{ label: "HOME", id: "home" },
+							{ label: "ABOUT", id: "blog" },
+							{ label: "PORTFOLIO", id: "portfolio" },
+							{ label: "CONTACTS", id: "contacts" },
+						].map(({ label, id }) => (
+							<li
+								key={id}
+								className='mb-4 pb-3 border-bottom border-secondary'>
 								<a
-									href='#home'
-									className='text-white text-decoration-none fs-5'>
-									HOME
+									href={`#${id}`}
+									className='text-white text-decoration-none fs-5 d-block'
+									onClick={handleLinkClick}>
+									{label}
 								</a>
-								<IoIosArrowDown
-									className={`transition-transform duration-300 ${
-										activeDropdown === "HOME"
-											? "rotate-180"
-											: ""
-									}`}
-								/>
-							</div>
-							<div
-								className={`ps-3 mt-3 overflow-hidden transition-all duration-300 ${
-									activeDropdown === "HOME"
-										? "max-h-40 opacity-100"
-										: "max-h-0 opacity-0"
-								}`}>
-								<div className='mb-2'>
-									<a
-										href='#home-1'
-										className='text-secondary text-decoration-none'>
-										Homepage 1
-									</a>
-								</div>
-								<div>
-									<a
-										href='#home-2'
-										className='text-secondary text-decoration-none'>
-										Homepage 2
-									</a>
-								</div>
-							</div>
-						</li>
-
-						<li className='mb-4 pb-3 border-bottom border-secondary'>
-							<div
-								className='d-flex justify-content-between align-items-center text-white'
-								onClick={() => toggleDropdown("ABOUT")}>
-								<a
-									href='#blog'
-									className='text-white text-decoration-none fs-5'>
-									ABOUT
-								</a>
-								<IoIosArrowDown
-									className={`transition-transform duration-300 ${
-										activeDropdown === "ABOUT"
-											? "rotate-180"
-											: ""
-									}`}
-								/>
-							</div>
-							<div
-								className={`ps-3 mt-3 overflow-hidden transition-all duration-300 ${
-									activeDropdown === "ABOUT"
-										? "max-h-40 opacity-100"
-										: "max-h-0 opacity-0"
-								}`}>
-								<div className='mb-2'>
-									<a
-										href='#story'
-										className='text-secondary text-decoration-none'>
-										Our Story
-									</a>
-								</div>
-								<div>
-									<a
-										href='#team'
-										className='text-secondary text-decoration-none'>
-										Our Team
-									</a>
-								</div>
-							</div>
-						</li>
-
-						<li className='mb-4 pb-3 border-bottom border-secondary'>
-							<div
-								className='d-flex justify-content-between align-items-center text-white'
-								onClick={() => toggleDropdown("PORTFOLIO")}>
-								<a
-									href='#portfolio'
-									className='text-white text-decoration-none fs-5'>
-									PORTFOLIO
-								</a>
-								<IoIosArrowDown
-									className={`transition-transform duration-300 ${
-										activeDropdown === "PORTFOLIO"
-											? "rotate-180"
-											: ""
-									}`}
-								/>
-							</div>
-							<div
-								className={`ps-3 mt-3 overflow-hidden transition-all duration-300 ${
-									activeDropdown === "PORTFOLIO"
-										? "max-h-40 opacity-100"
-										: "max-h-0 opacity-0"
-								}`}>
-								<div className='mb-2'>
-									<a
-										href='#projects'
-										className='text-secondary text-decoration-none'>
-										Projects
-									</a>
-								</div>
-								<div>
-									<a
-										href='#case-studies'
-										className='text-secondary text-decoration-none'>
-										Case Studies
-									</a>
-								</div>
-							</div>
-						</li>
-
-						<li className='mb-4 pb-3 border-bottom border-secondary'>
-							<div
-								className='d-flex justify-content-between align-items-center text-white'
-								onClick={() => toggleDropdown("CONTACTS")}>
-								<a
-									href='#contacts'
-									className='text-white text-decoration-none fs-5'>
-									CONTACTS
-								</a>
-								<IoIosArrowDown
-									className={`transition-transform duration-300 ${
-										activeDropdown === "CONTACTS"
-											? "rotate-180"
-											: ""
-									}`}
-								/>
-							</div>
-							<div
-								className={`ps-3 mt-3 overflow-hidden transition-all duration-300 ${
-									activeDropdown === "CONTACTS"
-										? "max-h-40 opacity-100"
-										: "max-h-0 opacity-0"
-								}`}>
-								<div className='mb-2'>
-									<a
-										href='#get-in-touch'
-										className='text-secondary text-decoration-none'>
-										Get in Touch
-									</a>
-								</div>
-								<div>
-									<a
-										href='#locations'
-										className='text-secondary text-decoration-none'>
-										Locations
-									</a>
-								</div>
-							</div>
-						</li>
+							</li>
+						))}
 					</ul>
 
-					{/* Social Icons in Mobile Menu */}
+					{/* Social Icons */}
 					<div className='mt-auto'>
 						<ul className='d-flex justify-content-center list-unstyled gap-4'>
 							<li>
