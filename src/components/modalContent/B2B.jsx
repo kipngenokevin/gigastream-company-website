@@ -24,7 +24,7 @@ const B2bContent = (
 						className='rounded-lg shadow-md overflow-hidden'>
 						<div>
 							<img
-								src='b2b-1.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561473/b2b-1_lwfraa.png'
 								alt='B2B/ B2C Tech Solutions'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'
@@ -35,7 +35,7 @@ const B2bContent = (
 						</div>
 						<div>
 							<img
-								src='b2b-2.png'
+								src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561472/b2b-2_zqkreg.png'
 								alt='B2B/ B2C Tech Solutions'
 								className='object-cover h-96 md:h-[450px] lg:h-[450px] w-full'
 								loading='lazy'

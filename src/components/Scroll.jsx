@@ -1,6 +1,4 @@
 /** @format */
-
-import Mouse from "../../public/mouse.svg";
 import React, { useEffect } from "react";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -23,7 +21,7 @@ export default function Scroll() {
 				<div className='relative left-12 transform'>
 					<img
 						className='animate-bounce'
-						src={Mouse}
+						src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561480/mouse_flxrge.svg'
 						alt='Scroll down'
 						width={40}
 						style={{ margin: "1rem" }}
