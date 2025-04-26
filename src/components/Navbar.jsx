@@ -50,7 +50,7 @@ export default function Navbar() {
 			{/* Desktop nav */}
 			<nav className='justify-content-between desktop-nav d-none d-lg-flex'>
 				<ul className='d-flex justify-content-between align-items-center flex-grow-1'>
-					{["home", "blog", "portfolio", "contacts"].map(
+					{["home", "about","portfolio", "contacts"].map(
 						(section) => (
 							<li
 								key={section}
@@ -114,7 +114,7 @@ export default function Navbar() {
 					<ul className='list-unstyled mb-5'>
 						{[
 							{ label: "HOME", id: "home" },
-							{ label: "ABOUT", id: "blog" },
+							{ label: "ABOUT", id: "about" },
 							{ label: "PORTFOLIO", id: "portfolio" },
 							{ label: "CONTACTS", id: "contacts" },
 						].map(({ label, id }) => (

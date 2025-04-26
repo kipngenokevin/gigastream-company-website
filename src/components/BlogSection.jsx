@@ -40,7 +40,7 @@ export default function Blog() {
 
 	return (
 		<section
-			id='blog'
+			id='about'
 			ref={sectionRef}
 			className='blog-section d-flex align-items-center'>
 			<div className='container'>
