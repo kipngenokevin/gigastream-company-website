@@ -177,7 +177,7 @@ export default function VideoShowcase() {
 	return (
 		<section
 			
-			id='case-studies'
+			id='portfolio'
 			className='case-section video-showcase py-12 md:py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white'>
 			<div className='container mx-auto px-4'>
 				<div className='text-center mb-8 md:mb-16'>
