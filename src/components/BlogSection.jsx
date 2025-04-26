@@ -51,7 +51,7 @@ export default function Blog() {
 						className='img-fluid blog-animate'
 					/>
 					<h2 className='title blog-animate'>Who we are... </h2>
-					<p className='blog-animate text-xl md:text-2xl leading-9'>
+					<p className='blog-animate text-lg md:text-2xl leading-9'>
 						We are a bespoke advertising media tech company that
 						focuses on making real-life consumer and brand
 						connections.
@@ -59,7 +59,7 @@ export default function Blog() {
 
 					{showMore && (
 						<div className='blog-animate mt-4'>
-							<p className='text-xl md:text-2xl leading-8'>
+							<p className='text-lg md:text-2xl leading-8'>
 								Driving Business Growth through the power of
 								meaningful media experiences. We leverage the
 								power of location, creative, and smart audience
