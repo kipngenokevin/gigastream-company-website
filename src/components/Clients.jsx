@@ -12,31 +12,60 @@ export default function Clients() {
 	const brandLogos = [
 		"https://res.cloudinary.com/dipqldzry/image/upload/v1745561473/ArtCaffe_txmznp.png",
 		"https://radissonblu-menu.Ubuntu.click/images/logo.png",
+		"https://cdn.prod.website-files.com/64f1bc37dbffae8a63039ba2/652d21cea649f7473794651a_East_African_Breweries_EABL_2022_Logo.svg",
 		"https://artcaffemenu.Ubuntu.click/images/SAF-MAIN-LOGO.png",
+		"https://cdn.freebiesupply.com/logos/large/2x/pernod-ricard-logo-png-transparent.png",
+		"https://change.jambojet.com/Content/Images/jx-logo-2.png",
+		"https://rubiskenya.com/wp-content/uploads/2020/06/favicon-min.png",
+		"https://www.europeanbiomethaneweek.eu/wp-content/uploads/2024/03/TotalEnergies-1024x809.png.webp",
+		"https://globalooh.net/wp-content/uploads/2019/05/stanbic-bank.png",
+		"https://cdn.freebiesupply.com/images/large/2x/glaxosmithkline-logo-black-and-white.png",
+		"https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/United_Bank_for_Africa_logo.svg/1200px-United_Bank_for_Africa_logo.svg.png",
+		"https://tashheer.com/wp-content/uploads/2023/10/jubilee.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/BIDCO-AFRICA-LOGO-removebg-preview_xam5sf.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/ncba-bank-logo_ww4ner.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/unilever-logo_pdwji7.png",
+		"https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745667041/bank-of-africa_fqa8bt.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/pro-gas-removebg-preview_glxqdm.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/absa_mghras.png",
 		"https://cdn-webportal.airtelstream.net/website/kenya/assets/images/logo.svg",
+		"https://www.shofco.org/wp-content/uploads/2020/06/bidco-africa.png",
+		"https://firstassurance.co.ke/wp-content/uploads/2023/02/FIRST-ASSUARANCE-1-1.png",
+		"https://equitygroupholdings.com/ke/ke/Content/assets/img/equity-bank-logo.png",
+		"https://fidelityshield.com/wp-content/uploads/2022/12/FIDELITY-LOGO-White.png",
+		"https://icealion.co.ug/wp-content/uploads/2021/03/cropped-cropped-ICEA-LION-LOGO-Horizontal-UG-01-1.png",
+		"https://res.cloudinary.com/dipqldzry/image/upload/v1745664459/national-oil_obyctu.png",
 	];
 
-	const extendedBrandLogos = [...brandLogos, ...brandLogos, ...brandLogos,...brandLogos];
+	// Use two sets of logos for seamless looping
+	const extendedBrandLogos = [...brandLogos, ...brandLogos];
 
 	useEffect(() => {
 		const ctx = gsap.context(() => {
 			const logosContainer = logosRef.current;
 			const logos = gsap.utils.toArray(".client-logo", logosContainer);
 
-			const logoWidth = 150; 
-			const gap = 128; 
-			const totalWidth = logos.length * (logoWidth + gap); 
+			// Calculate the width of one logo set dynamically
+			const firstLogoSet = logos.slice(0, brandLogos.length);
+			const logoSetWidth = firstLogoSet.reduce((width, logo) => {
+				const style = window.getComputedStyle(logo);
+				const logoWidth = logo.offsetWidth;
+				const marginRight = parseFloat(style.marginRight) || 0;
+				return width + logoWidth + marginRight;
+			}, 0);
 
-			gsap.set(logosContainer, { width: totalWidth });
+			// Set container width to accommodate two logo sets
+			gsap.set(logosContainer, { width: logoSetWidth * 2 });
 
-			
+			// Animate to move one logo set's width, then reset
 			gsap.to(logosContainer, {
-				x: -totalWidth / 3,
-				duration: 25,
+				x: -logoSetWidth,
+				duration: 20, // Adjust for speed (lower = faster)
 				ease: "none",
 				repeat: -1,
 				modifiers: {
-					x: (x) => `${parseFloat(x) % (totalWidth / 3)}px`, 
+					x: (x) => `${parseFloat(x) % logoSetWidth}px`,
 				},
 			});
 		}, sectionRef);
@@ -66,13 +95,15 @@ export default function Clients() {
 								{extendedBrandLogos.map((src, index) => (
 									<img
 										key={index}
-										className='img-fluid client-logo grayscale-100 contrast-100 brightness-200'
+										className='client-logo grayscale-100 contrast-100 brightness-200'
 										src={src}
 										alt={`Client logo ${
 											(index % brandLogos.length) + 1
 										}`}
-										width={150}
-										style={{ flexShrink: 0 }}
+										style={{
+											width: "150px",
+											flexShrink: 0,
+										}} // Consistent width
 									/>
 								))}
 							</div>

@@ -315,3 +315,42 @@ footer {
         padding-left: 0;
     }
 }
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.carousel-slide.active {
+  transform: scale(1.2); /* Scale up the active slide */
+  z-index: 10; /* Ensure the active slide stays on top */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
