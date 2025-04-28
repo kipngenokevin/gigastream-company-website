@@ -1,356 +1,370 @@
+/** @format */
+
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'GothamBold';
-    src: url('./GothamBold.ttf') format('woff2'), /* Modern Browsers */
-         url('./GothamBold.ttf') format('woff');   /* Older Browsers */
-    
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "GothamBold";
+	src: url("./GothamBold.ttf") format("woff2"),
+		/* Modern Browsers */ url("./GothamBold.ttf") format("woff"); /* Older Browsers */
+
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'GothamBook';
-    src: url('./GothamBook.ttf') format('woff2'), /* Modern Browsers */
-         url('./GothamBook.ttf') format('woff');   /* Older Browsers */
-    
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "GothamBook";
+	src: url("./GothamBook.ttf") format("woff2"),
+		/* Modern Browsers */ url("./GothamBook.ttf") format("woff"); /* Older Browsers */
+
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'GothamMedium';
-    src: url('./GothamMedium.ttf') format('woff2'), /* Modern Browsers */
-         url('./GothamMedium.ttf') format('woff');   /* Older Browsers */
-    
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: "GothamMedium";
+	src: url("./GothamMedium.ttf") format("woff2"),
+		/* Modern Browsers */ url("./GothamMedium.ttf") format("woff"); /* Older Browsers */
+
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Montserrat-extra';
-    src: url('./Montserrat-ExtraBold.otf') format('woff2'), /* Modern Browsers */
-         url('./Montserrat-ExtraBold.otf') format('woff');   /* Older Browsers */
-    
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Montserrat-extra";
+	src: url("./Montserrat-ExtraBold.otf") format("woff2"),
+		/* Modern Browsers */ url("./Montserrat-ExtraBold.otf") format("woff"); /* Older Browsers */
+
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Montserrat-regular';
-    src: url('./Montserrat-Regular.otf') format('woff2'), /* Modern Browsers */
-         url('./Montserrat-Regular.otf') format('woff');   /* Older Browsers */
-    
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Montserrat-regular";
+	src: url("./Montserrat-Regular.otf") format("woff2"),
+		/* Modern Browsers */ url("./Montserrat-Regular.otf") format("woff"); /* Older Browsers */
+
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 :root {
-
 }
 
 body {
-    font-family: "Montserrat", sans-serif !important;
-    color: white !important;
-    overflow-x: hidden;
+	font-family: "Montserrat", sans-serif !important;
+	color: white !important;
+	overflow-x: hidden;
+	background-color: #642b73;
+	background-color: -webkit-linear-gradient(
+		to right,
+		#c6426e,
+		#642b73
+	);
+	background-color: linear-gradient(
+		to right,
+		#c6426e,
+		#642b73
+	); 
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 900 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900 !important;
 }
 
 .hero-section {
-    background: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561487/herobackground_smdttn.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+	background: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561487/herobackground_smdttn.svg"),
+		linear-gradient(to right, #c6426e, #642b73);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
 }
 
 nav {
-    width: 100%;
-    font-size: small;
+	width: 100%;
+	font-size: small;
 }
 
 nav > ul {
-    list-style: none;
+	list-style: none;
 }
 
 nav ul li {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .social-icons {
-    width: 100%;
-    padding: 0 0.2rem;
-    margin: 0 0.5rem;
+	width: 100%;
+	padding: 0 0.2rem;
+	margin: 0 0.5rem;
 }
 
 .in-touch-btn {
-    padding: 0.1rem;
-    background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
-    width: max-content;
-    border-radius: 2rem;
-    position: relative;
-    top: 4rem;
+	padding: 0.1rem;
+	background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
+	width: max-content;
+	border-radius: 2rem;
+	position: relative;
+	top: 4rem;
 }
 
 .in-touch-btn button {
-    background: linear-gradient(#09001eff, #1a0f29ff) ;
-    border-radius: 2rem;
-    padding: 0.5rem 2rem;
-    color: white;
+	background: linear-gradient(#09001eff, #1a0f29ff);
+	border-radius: 2rem;
+	padding: 0.5rem 2rem;
+	color: white;
 }
 
 .in-touch-btn img {
-    width: 2rem;
-    margin-left: 1rem;
+	width: 2rem;
+	margin-left: 1rem;
 }
 
 .hero-main {
-    height: 35rem;
+	height: 35rem;
 }
 
 .hero-title {
-    font-weight: 900;
-    font-size: 3rem;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    opacity: 0;
-    transform: translateX(-20px);
+	font-weight: 900;
+	font-size: 3rem;
+	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+	opacity: 0;
+	transform: translateX(-20px);
 }
 
 .title {
-    font-weight: 900;
-    font-size: 2rem;
+	font-weight: 900;
+	font-size: 2rem;
 }
 
 .hero-title.active {
-    opacity: 1;
-    transform: translateX(0);
+	opacity: 1;
+	transform: translateX(0);
 }
 
 .desktop-nav {
-    display: none !important;
+	display: none !important;
 }
 
 .contact-section {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .contact-item {
-    gap: 1rem;
-    width: 100%;
-    padding-left: 2rem;
+	gap: 1rem;
+	width: 100%;
+	padding-left: 2rem;
 }
 
 .arrows {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .text-left {
-    text-align: left;
+	text-align: left;
 }
 
 .work-section {
-    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 70vh;
-    padding: 2rem 0;
+	background-image: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 70vh;
+	padding: 2rem 0;
 }
 
 .blog-section {
-    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561493/blogbg_oxd38g.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 70vh;
-    padding: 2rem 0;
+	background-image: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561493/blogbg_oxd38g.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 70vh;
+	padding: 2rem 0;
 }
 
 .case-section {
-    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561492/casebg_gkgcdm.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 70vh;
-    padding: 2rem 0;
+	background-image: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561492/casebg_gkgcdm.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 70vh;
+	padding: 2rem 0;
 }
 
 .clients-section {
-    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 60vh;
-    padding: 2rem 0;
+	background-image: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561474/workbg_zaavyo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 60vh;
+	padding: 2rem 0;
 }
 
 .case-main {
-    height: 50vh;
+	height: 50vh;
 }
 
 .work-container {
-    width: 18rem;
-    padding: 1rem;
-    margin: 0.5rem;
+	width: 18rem;
+	padding: 1rem;
+	margin: 0.5rem;
 }
 
 .work-container img {
-    margin: 1rem;
+	margin: 1rem;
 }
 
 .case-container {
-    width: 24rem;
+	width: 24rem;
 }
 
 .case-container img {
-    object-fit: cover;
-    width: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .clients-container {
-    height: 30vh;
+	height: 30vh;
 }
 
 footer {
-    background-image: url('https://res.cloudinary.com/dipqldzry/image/upload/v1745561490/footerbg_ygciuh.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 40vh;
-    padding: 2rem 0;
+	background-image: url("https://res.cloudinary.com/dipqldzry/image/upload/v1745561490/footerbg_ygciuh.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 40vh;
+	padding: 2rem 0;
 }
 
 .maps-container {
-    margin: 2rem 0rem;
+	margin: 2rem 0rem;
 }
 
 .red-bg {
-    background-color: red;
+	background-color: red;
 }
 
 .purple-bg {
-    background-color: purple;
+	background-color: purple;
 }
 
 .dark-bg {
-    background: linear-gradient(#09001eff, #1a0f29ff) ;
+	background: linear-gradient(#09001eff, #1a0f29ff);
 }
 
 .work-container-btn {
-    padding: 0.1rem;
-    background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
-    width: max-content;
-    border-radius: 1rem;
+	padding: 0.1rem;
+	background: linear-gradient(45deg, #5db9e9ff, #9360a8ff, #e5b5d4ff);
+	width: max-content;
+	border-radius: 1rem;
 }
 
 .work-container-btn button {
-    border: none;
-    border-radius: 1rem;
-    padding: 0.2rem 1rem;
-    color: white;
+	border: none;
+	border-radius: 1rem;
+	padding: 0.2rem 1rem;
+	color: white;
 }
 
 @media screen and (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-
-    
+	.hero-title {
+		font-size: 2rem;
+	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+	.desktop-nav {
+		display: flex !important;
+	}
 
-@media only screen and (min-width: 768px) and (max-width: 1200px){
-    .desktop-nav {
-        display: flex !important;
-    }
+	.hero-title {
+		font-size: 4rem;
+	}
 
-    .hero-title {
-        font-size: 4rem;
-    }
+	.title {
+		font-weight: 900;
+		font-size: 3rem;
+	}
 
-    .title {
-        font-weight: 900;
-        font-size: 3rem;
-    }
+	.contact-item {
+		width: auto;
+		padding-left: 0;
+	}
 
-    .contact-item {
-        width: auto;
-        padding-left: 0;
-    }
-
-    .contact-section {
-        flex-direction: row;
-    }
+	.contact-section {
+		flex-direction: row;
+	}
 }
-  
+
 @media only screen and (min-width: 1201px) {
-    .desktop-nav {
-        display: flex !important;
-    }
+	.desktop-nav {
+		display: flex !important;
+	}
 
-    .hero-title {
-        font-size: 5rem;
-    }
+	.hero-title {
+		font-size: 5rem;
+	}
 
-    .title {
-        font-weight: 900;
-        font-size: 4rem;
-    }
+	.title {
+		font-weight: 900;
+		font-size: 4rem;
+	}
 
-    .contact-section {
-        flex-direction: row;
-    }
+	.contact-section {
+		flex-direction: row;
+	}
 
-    .contact-item {
-        width: auto;
-        padding-left: 0;
-    }
+	.contact-item {
+		width: auto;
+		padding-left: 0;
+	}
 }
 
 .carousel-container {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .carousel {
-  display: flex;
-  transition: transform 0.5s ease;
+	display: flex;
+	transition: transform 0.5s ease;
 }
 
 .carousel-slide {
-  min-width: 100%;
-  transition: opacity 0.5s ease, transform 0.3s ease;
+	min-width: 100%;
+	transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
 .carousel-slide.active {
-  transform: scale(1.2); /* Scale up the active slide */
-  z-index: 10; /* Ensure the active slide stays on top */
+	transform: scale(1.2); /* Scale up the active slide */
+	z-index: 10; /* Ensure the active slide stays on top */
 }
 
 .carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 1;
 }
 
 .prev-button {
-  left: 10px;
+	left: 10px;
 }
 
 .next-button {
-  right: 10px;
+	right: 10px;
 }

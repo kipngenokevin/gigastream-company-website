@@ -80,16 +80,6 @@ export default function Navbar() {
 							<BsLinkedin className='social-icons w-6 h-6 text-white' />
 						</a>
 					</li>
-					<li>
-						<a href=''>
-							<BsTwitterX className='social-icons w-6 h-6 text-white' />
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<BsFacebook className='social-icons w-6 h-6 text-white' />
-						</a>
-					</li>
 				</ul>
 			</nav>
 
@@ -146,16 +136,6 @@ export default function Navbar() {
 									href='https://www.linkedin.com/company/gigastream-media-tech-ltd'
 									target='_blank'>
 									<BsLinkedin className='social-icons w-6 h-6 text-white' />
-								</a>
-							</li>
-							<li>
-								<a href=''>
-									<BsTwitterX className='social-icons w-6 h-6 text-white' />
-								</a>
-							</li>
-							<li>
-								<a href=''>
-									<BsFacebook className='social-icons w-6 h-6 text-white' />
 								</a>
 							</li>
 						</ul>
