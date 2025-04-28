@@ -123,7 +123,7 @@ export default function Navbar() {
 
 					{/* Social Icons */}
 					<div className='mt-auto'>
-						<ul className='d-flex justify-content-center list-unstyled gap-4'>
+						<ul className='d-flex justify-content-center list-unstyled gap-8'>
 							<li>
 								<a
 									href='https://www.instagram.com/gigastream_media/'
