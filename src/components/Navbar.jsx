@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from "react";
 import {
-	BsFacebook,
 	BsInstagram,
 	BsLinkedin,
-	BsTwitterX,
 } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
