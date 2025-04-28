@@ -50,7 +50,7 @@ export default function Navbar() {
 			{/* Desktop nav */}
 			<nav className='justify-content-between desktop-nav d-none d-lg-flex'>
 				<ul className='d-flex justify-content-between align-items-center flex-grow-1'>
-					{["home", "about","portfolio", "contacts"].map(
+					{["home", "about", "portfolio", "contacts"].map(
 						(section) => (
 							<li
 								key={section}
