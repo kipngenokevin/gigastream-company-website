@@ -1,0 +1,17 @@
+# Allow Googlebot
+User-agent: Googlebot
+Disallow:
+
+# Allow Twitterbot
+User-agent: Twitterbot
+Disallow:
+
+# Disallow all other bots from accessing sensitive directories
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /scripts/
+
+# Sitemap location
+Sitemap: https://gigastreammedia.net/sitemap.xml
