@@ -14,4 +14,4 @@ Disallow: /config/
 Disallow: /scripts/
 
 # Sitemap location
-Sitemap: https://gigastreammedia.net/sitemap.xml
+Sitemap: https://gigastreammedia.com/sitemap.xml

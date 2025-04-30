@@ -6,12 +6,6 @@ Disallow:
 User-agent: Twitterbot
 Disallow:
 
-# Disallow all other bots from accessing sensitive directories
-User-agent: *
-Disallow: /admin/
-Disallow: /private/
-Disallow: /config/
-Disallow: /scripts/
 
 # Sitemap location
 Sitemap: https://gigastreammedia.com/sitemap.xml
