@@ -8,7 +8,7 @@ export default function Header() {
 					<img
 						width={"200rem"}
 						className='img-fluid'
-						src='https://res.cloudinary.com/dipqldzry/image/upload/v1745561483/logo_quompq.svg'
+						src='https://res.cloudinary.com/dipqldzry/image/upload/v1754385797/logo_yxzllg.svg'
 						alt='Gigastream Logo'
 					/>
 				</div>
