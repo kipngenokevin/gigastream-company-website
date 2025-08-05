@@ -32,9 +32,9 @@ function App() {
 				/>
 				<meta
 					property='og:image'
-					content='https://gigastreammedia.net/images/og-image.jpg'
+					content='https://res.cloudinary.com/dipqldzry/image/upload/v1754384213/gigastream-logo_ukqfvq.svg'
 				/>
-				<meta property='og:url' content='https://gigastreammedia.net' />
+				<meta property='og:url' content='https://gigastreammedia.com' />
 
 				{/* Twitter Card */}
 				<meta name='twitter:card' content='summary_large_image' />
@@ -48,7 +48,7 @@ function App() {
 				/>
 				<meta
 					name='twitter:image'
-					content='https://gigastreammedia.net/images/og-image.jpg'
+					content='https://res.cloudinary.com/dipqldzry/image/upload/v1754384213/gigastream-logo_ukqfvq.svg'
 				/>
 
 				{/* Structured Data (JSON-LD) */}
@@ -58,23 +58,10 @@ function App() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Gigastream Media Limited",
-              "url": "https://gigastreammedia.net",
-              "logo": "https://gigastreammedia.net/images/logo.png",
+              "url": "https://gigastreammedia.com",
+              "logo": "https://res.cloudinary.com/dipqldzry/image/upload/v1754384213/gigastream-logo_ukqfvq.svg",
               "description": "Innovative branding and advertising solutions to engage audiences."
             }
-          `}
-				</script>
-
-				{/* Google Analytics */}
-				<script
-					async
-					src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'></script>
-				<script>
-					{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
           `}
 				</script>
 			</Helmet>
